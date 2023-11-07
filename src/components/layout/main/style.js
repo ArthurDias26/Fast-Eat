@@ -2,5 +2,5 @@ import styled from 'styled-components'
 
 export const MainBox = styled.main`
     min-height: 88vh;
-    background-color: #f6f6f6;
+    background-color: #F9F2EA;
 `

@@ -1,8 +1,8 @@
 const colors = {
-    redlight: '#FD5200',
+    redlight: '#DF080F',
     reddark: '#710317',
-    yelow: '#FCDC4D',
-    orange: '#E06D06',
+    yelow: '#FBE690',
+    orange: '#DD2803',
 }
 
 export default colors
