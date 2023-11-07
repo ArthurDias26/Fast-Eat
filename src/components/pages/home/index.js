@@ -8,7 +8,7 @@ export default function index() {
     return(
         <Home>
             <Outdoor>
-                <h1>CONHEÇA NOSSO CARDAPIO</h1>
+                <h1>CONHEÇA NOSSO CARDAPIO.</h1>
                 <LinkButton link='/menu' text='Veja Aqui!'/>
             </Outdoor>
 

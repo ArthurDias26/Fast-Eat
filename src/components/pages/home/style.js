@@ -8,18 +8,25 @@ export const Home = styled.div`
 export const Outdoor = styled.section`
    background-image: url(${BackImage});
    min-height: 88vh;
-   background-position: right;
+   background-position: right bottom;
    background-size: 60%;
    background-color: ${props => props.theme.yelow};
    background-repeat: no-repeat;
    color: white;
-   font-size: 26px;
-   padding: 18vw 0 0 15px;
+   font-size: 30px;
+   padding: 10vw 0 0 15px;
    background-attachment: fixed;
    color: ${props => props.theme.orange};
 
    h1{
-      margin-bottom: 14px;
+      margin-bottom: 35px;
+      font-size: 4.5vw;
+   }
+
+   @media (max-width: 800px) {
+    background-size: 100%;
+    background-position: -%;
+
    }
 
 `
