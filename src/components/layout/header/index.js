@@ -16,11 +16,11 @@ export default function index() {
             <MenuBox>
 
                 <Link to={'/'}>
-                    <span>Home</span>
+                    <span>Ìnicio</span>
                 </Link>
 
                 <Link to={'/menu'}>
-                    <span>Menu</span>
+                    <span>Cardápio</span>
                 </Link>
 
                 <Link to={'/reserve'}>

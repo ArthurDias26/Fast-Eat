@@ -33,6 +33,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: #555;    
     border-radius: 20px;       
     }
+
 `
 
 export default GlobalStyle
