@@ -5,6 +5,7 @@ padding: 15px;
     background-color: ${props => props.theme.redlight};
     color: white;
     font-size: 18px;
+    margin-top: 15vh;
 
 `
 

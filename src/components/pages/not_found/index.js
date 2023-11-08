@@ -6,7 +6,7 @@ export default function index() {
         <NotFound>
             <div>
                 <h1>Error 404</h1>
-                <p>Pagina não encontrada, paara voltar <a href="/">Clique aqui</a></p>  
+                <p>Pagina não encontrada, para voltar <a href="/">Clique aqui</a></p>  
             </div>
         </NotFound>
     )

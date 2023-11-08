@@ -79,11 +79,13 @@ export const MenuOptionsContainer = styled.section`
 `
 
 export const MenuOptions = styled.div`
-   padding: 3vh 3vw;
+   padding: 3vh 15px;
    box-shadow: .5px .5px 4px #bbb;
    background-color: white;
    border-radius: 30px;
    display: flex;
+   align-items: center;
+   justify-content: center;
    width: 80vw;
 `
 
@@ -92,7 +94,6 @@ export const Option = styled.a`
    text-align: center;
    color: black;
    text-decoration: none;
-   transition: all .2s;
    border-radius: 12px;
    position: relative;
    padding: 10px;
@@ -109,12 +110,37 @@ export const Option = styled.a`
       transition: all .2s;
    }
 
-   &:hover{
-      background-color: #111;
+   div.back-black{
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      transition: all .2s;
+      border-radius: 12px;
 
-      h3{
-         color: white;
       }
 
+   &:hover{
+      h3{
+         color: white;
+         z-index: 100;
+      }
+
+      div.back-black{
+         background-color: #0000007e;
+
+      }
+
+   }
+`
+
+export const Map = styled.section`
+
+   iframe{
+      width: 100%;
+      height: 40vh;
    }
 `

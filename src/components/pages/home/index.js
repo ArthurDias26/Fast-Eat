@@ -1,4 +1,4 @@
-import { Home, Outdoor, Cards, Card, ButtonArea, MenuOptionsContainer, MenuOptions, Option } from "./style"
+import { Home, Outdoor, Cards, Card, ButtonArea, MenuOptionsContainer, MenuOptions, Option, Map } from "./style"
 import LinkButton from '../../layout/linkButton'
 
 import smartphoneIcon from '../../../assets/images/smartphone.png'
@@ -59,16 +59,19 @@ export default function index() {
                     <Option href="/menu">
                         <img src={pizza} alt='smartphone'/>
                         <h3>Pizzas</h3>
+                        <div className="back-black"></div>
                     </Option>
 
                     <Option href="/menu">
                         <img src={esfirra} alt='smartphone'/>
                         <h3>Pizzas</h3>
+                        <div className="back-black"></div>
                     </Option>
 
                     <Option href="/menu">
                         <img src={bebidas} alt='smartphone'/>
                         <h3>Pizzas</h3>
+                        <div className="back-black"></div>
                     </Option>
 
                     
@@ -76,6 +79,10 @@ export default function index() {
                 </MenuOptions>
 
             </MenuOptionsContainer>
+
+            <Map>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1572.146981706316!2d-50.08025029270346!3d-20.415159622168208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9497e30d7fa80c73%3A0xf021bae45d284a03!2sPizzaria%20Nappi!5e0!3m2!1spt-BR!2sbr!4v1699462111354!5m2!1spt-BR!2sbr" ></iframe>
+            </Map>
 
         </Home>
     )
