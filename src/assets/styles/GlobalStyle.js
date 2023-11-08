@@ -5,6 +5,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,700;1,200;1,400;1,700&display=swap');
 
     *{
         padding: 0;
@@ -15,6 +16,13 @@ const GlobalStyle = createGlobalStyle`
     html, body, #root{
         width: 100%;
         font-family: 'nunito', sans-serif;
+        background-color: #F9F2EA;
+
+    }
+
+    h1, h2, h3, h4, h5, h6, a{
+        font-family: 'Barlow', sans-serif;
+
     }
 
     html{

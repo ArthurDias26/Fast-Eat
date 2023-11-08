@@ -17,9 +17,31 @@ export const Outdoor = styled.section`
    padding: 12vh 0 0 3vw;
    color: ${props => props.theme.orange};
 
+   div{
+      position: relative;
+      width: max-content;
+
+   }
+
    h1{
       margin-bottom: 35px;
       font-size: 4.5vw;
+   }
+
+   a{
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 110%);
+      max-width: 8vw;
+      height: max-content;
+      padding: 0 40px !important;
+   }
+
+   img{
+      max-width: 100%;
+      max-height: 100%;
+      transform: rotate(270deg);
    }
 
    @media (max-width: 800px) {
@@ -52,6 +74,12 @@ export const Card = styled.div`
    background-color: white;
    max-width: 20vw;
    box-shadow: .5px .5px 4px #bbb;
+   text-align: center;
+
+   h2{
+      margin-top: 15px;
+   }
+
    img{
       width: 15vw;
    }
@@ -61,7 +89,7 @@ export const ButtonArea = styled.div`
    display: flex;
    justify-content: center;
    pad: 15px 0;
-   font-size: 18px;
+   font-size: 24px;
 `
 
 export const MenuOptionsContainer = styled.section`
@@ -79,7 +107,7 @@ export const MenuOptionsContainer = styled.section`
 `
 
 export const MenuOptions = styled.div`
-   padding: 3vh 15px;
+   padding: 20px 15px;
    box-shadow: .5px .5px 4px #bbb;
    background-color: white;
    border-radius: 30px;
@@ -96,18 +124,22 @@ export const Option = styled.a`
    text-decoration: none;
    border-radius: 12px;
    position: relative;
-   padding: 10px;
+   margin: 0 8px;
 
    img{
       max-width: 100%;
+      border-radius: 12px;
    }
 
    h3{
       position: absolute;
       top: 50%;
-      left: 50%;
+      text-align: center;
+      width: 100%;
       color: transparent;
       transition: all .2s;
+      transform: translate(0, -50%);
+      font-size: 34px;
    }
 
    div.back-black{
@@ -130,8 +162,7 @@ export const Option = styled.a`
       }
 
       div.back-black{
-         background-color: #0000007e;
-
+         background-color: #71031773;
       }
 
    }
@@ -139,8 +170,34 @@ export const Option = styled.a`
 
 export const Map = styled.section`
 
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-size: 20px;
+
+   h1{
+      margin-bottom: 3vh;
+      font-size: 38px;
+   }
+
    iframe{
       width: 100%;
       height: 40vh;
+   }
+
+   a{
+      margin-top: 5vh;
+      text-decoration: none;
+      color: white;
+      padding: 14px 42px;
+      border-radius: 26px;
+      background-color: ${props => props.theme.orange};
+      font-weight: bold;
+      transition: all .2s;
+   }
+
+   a:hover{
+      background-color: ${props => props.theme.reddark};
    }
 `

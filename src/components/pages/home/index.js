@@ -1,5 +1,6 @@
 import { Home, Outdoor, Cards, Card, ButtonArea, MenuOptionsContainer, MenuOptions, Option, Map } from "./style"
 import LinkButton from '../../layout/linkButton'
+import seta from '../../../assets/images/seta-direita.png'
 
 import smartphoneIcon from '../../../assets/images/smartphone.png'
 import menuIcon from '../../../assets/images/cardapio.png'
@@ -16,9 +17,11 @@ export default function index() {
     return(
         <Home>
             <Outdoor>
-                    <h2>BEM VINDO A FAST EAT,</h2>
-                    <h1>CONHEÇA NOSSO CARDAPIO.</h1>
-                    <LinkButton link='/menu' text='Clique Aqui!'/>
+                    <div>
+                        <h2>BEM VINDO A FAST EAT,</h2>
+                        <h1>CONHEÇA NOSSO CARDAPIO.</h1>
+                        <LinkButton link='/menu' text={<img src={seta} alt='smartphone'/>}/>
+                    </div>
             </Outdoor>
 
             <Cards>
@@ -26,19 +29,19 @@ export default function index() {
 
                     <Card>
                         <img src={smartphoneIcon} alt='smartphone'/>
-                        <h2>Faça o pedido em casa</h2>
+                        <h2>Faça seu pedido em casa</h2>
                         <p>Maecenas vel leo nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec at orci sit amet est accumsan semper nec vitae mi.</p>
                     </Card>
 
                     <Card>
                         <img src={menuIcon} alt='smartphone'/>
-                        <h2>Faça o pedido em casa</h2>
+                        <h2>Veja as opções do menu</h2>
                         <p>Maecenas vel leo nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec at orci sit amet est accumsan semper nec vitae mi.</p>
                     </Card>
 
                     <Card>
                         <img src={deliveryIcon} alt='smartphone'/>
-                        <h2>Faça o pedido em casa</h2>
+                        <h2>Entrega em 30 minutos</h2>
                         <p>Maecenas vel leo nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec at orci sit amet est accumsan semper nec vitae mi.</p>
                     </Card>
 
@@ -52,7 +55,7 @@ export default function index() {
             </ButtonArea>
 
             <MenuOptionsContainer>
-                <h1>VEJA AS OPÇÕES DO CARDÁPIO</h1>
+                <h1>Veja as opções do cardápio</h1>
 
                 <MenuOptions>
 
@@ -64,13 +67,13 @@ export default function index() {
 
                     <Option href="/menu">
                         <img src={esfirra} alt='smartphone'/>
-                        <h3>Pizzas</h3>
+                        <h3>Esfirras</h3>
                         <div className="back-black"></div>
                     </Option>
 
                     <Option href="/menu">
                         <img src={bebidas} alt='smartphone'/>
-                        <h3>Pizzas</h3>
+                        <h3>Bebidas</h3>
                         <div className="back-black"></div>
                     </Option>
 
@@ -81,8 +84,11 @@ export default function index() {
             </MenuOptionsContainer>
 
             <Map>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1572.146981706316!2d-50.08025029270346!3d-20.415159622168208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9497e30d7fa80c73%3A0xf021bae45d284a03!2sPizzaria%20Nappi!5e0!3m2!1spt-BR!2sbr!4v1699462111354!5m2!1spt-BR!2sbr" ></iframe>
+                <h1>Loaclização</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1572.146981706316!2d-50.08025029270346!3d-20.415159622168208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9497e30d7fa80c73%3A0xf021bae45d284a03!2sPizzaria%20Nappi!5e0!3m2!1spt-BR!2sbr!4v1699462111354!5m2!1spt-BR!2sbr" title="Map"/>
+                <a href="https://www.google.com/maps/dir//Pizzaria+Nappi,+Av.+Carlos+Glerian,+194+-+Jd.+Monte+Belo,+Valentim+Gentil+-+SP,+15520-000/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x9497e30d7fa80c73:0xf021bae45d284a03!3e0?sa=X&ved=2ahUKEwiesOWD87SCAxXSLrkGHXcNC-0Qox16BAgSEAA" target="_blank" rel="noreferrer">Veja a melhor rota</a>
             </Map>
+
 
         </Home>
     )

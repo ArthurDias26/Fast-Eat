@@ -16,7 +16,6 @@ import NotFound from './components/pages/not_found'
 
 function App() {
   return (
-    <div className="App">
       <Router>
 
         <ThemeProvider theme={theme}>
@@ -39,7 +38,6 @@ function App() {
         </ThemeProvider>
 
       </Router>
-    </div>
   );
 }
 
