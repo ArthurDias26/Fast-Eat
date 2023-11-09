@@ -38,35 +38,35 @@ export const Outdoor = styled.section`
     background-position: bottom;
 
     a{
-      font-size: 22px;
+      font-size: 26px;
     }
 
     h2{
-      font-size: 3vw;
+      font-size: 4.5vw;
    }
 
    h1{
       margin-bottom: 15px;
-      font-size:5vw;
+      font-size:8vw;
    }
 
    }
 
-   @media (max-width: 560px) {
+   @media (max-width: 680px) {
     background-size: 100%;
     background-position: bottom;
 
     a{
-      font-size: 16px;
+      font-size: 26px;
     }
 
     h2{
-      font-size: 3.6vw;
+      font-size: 4vw;
    }
 
    h1{
       margin-bottom: 10px;
-      font-size: 6.2vw;
+      font-size: 12vw;
    }
 
    }
@@ -244,7 +244,7 @@ export const Map = styled.section`
 
    iframe{
       width: 100%;
-      height: 40vh;
+      height: 35vh;
    }
 
    a{
@@ -260,5 +260,11 @@ export const Map = styled.section`
 
    a:hover{
       background-color: ${props => props.theme.reddark};
+   }
+
+   @media (max-width: 460px) {
+      iframe{
+      height: 25vh;
+   }
    }
 `

@@ -17,8 +17,8 @@ export default function index() {
         <Home>
             <Outdoor>
                         <h2>BEM VINDO A FAST EAT,</h2>
-                        <h1>CONHEÇA NOSSO CARDAPIO.</h1>
-                        <LinkButton link='/menu' text='Clique Aqui!'/>
+                        <h1>CONHEÇA NOSSO CARDAPIO!</h1>
+                        <LinkButton link='/menu' text='Clique Aqui'/>
             </Outdoor>
 
             <Cards>
@@ -48,7 +48,7 @@ export default function index() {
             </Cards>
 
             <ButtonArea>
-                <LinkButton link='/menu' text='Peça Agora!'/>
+                <LinkButton link='/menu' text='Peça Agora'/>
             </ButtonArea>
 
             <MenuOptionsContainer>
