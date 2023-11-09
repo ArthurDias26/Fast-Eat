@@ -7,6 +7,39 @@ padding: 15px;
     font-size: 18px;
     margin-top: 15vh;
 
+    @media (max-width: 920px) {
+        font-size: 14px;
+
+        div div img{
+            width: 25px;
+            height: 25px;
+    }
+    }
+
+    @media (max-width: 680px) {
+        font-size: 12px;
+
+        div div img{
+            width: 20px;
+            height: 20px;
+    }
+    }
+
+    @media (max-width: 480px) {
+        div{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            div{
+                margin-top: 8px;
+            }
+
+        }
+
+    }
+
 `
 
 export const FlexBox = styled.div`
@@ -25,6 +58,7 @@ export const SocialIcons = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: row !important;
         
         a{
             padding: 8px 8px 3px 8px;

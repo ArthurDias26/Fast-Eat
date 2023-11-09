@@ -17,25 +17,13 @@ export const Outdoor = styled.section`
    padding: 12vh 0 0 3vw;
    color: ${props => props.theme.orange};
 
-   div{
-      position: relative;
-      width: max-content;
-
-   }
-
    h1{
       margin-bottom: 35px;
       font-size: 4.5vw;
    }
 
    a{
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translate(-50%, 110%);
-      max-width: 8vw;
-      height: max-content;
-      padding: 0 40px !important;
+
    }
 
    img{
@@ -46,7 +34,7 @@ export const Outdoor = styled.section`
 
    @media (max-width: 800px) {
     background-size: 100%;
-    background-position: center;
+    background-position: bottom;
 
    }
 

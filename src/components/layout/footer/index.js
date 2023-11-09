@@ -9,12 +9,7 @@ export default function index() {
     return(
         <FooterBox>
             <FlexBox>
-            <div>
-                <h2>Endereço</h2>
-                <p>Rua Figuerira, Nº333</p>
-                <p>Valentim Gentil/SP</p>
-            </div>
-
+        
             <div>
                 <h2>Contato</h2>
                 <p>Telefone (17)99170-7070</p>
@@ -22,10 +17,17 @@ export default function index() {
             </div>
 
             <div>
-                <h2>Horario</h2>
+                <h2>Horário</h2>
                 <p>seg a sex: 10:00 às 22:00</p>
-                <p>sab e dom: 17:00 às 24:00</p>
+                <p>sáb e dom: 17:00 às 24:00</p>
             </div>
+
+            <div>
+                <h2>Endereço</h2>
+                <p>Rua Figuerira, Nº333</p>
+                <p>Valentim Gentil/SP</p>
+            </div>
+
             </FlexBox>
 
 

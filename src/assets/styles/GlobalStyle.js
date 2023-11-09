@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     html, body, #root{
-        width: 100%;
+        width: 100vw;
         font-family: 'nunito', sans-serif;
         background-color: #F9F2EA;
 

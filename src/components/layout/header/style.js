@@ -34,6 +34,7 @@ export const MenuBox = styled.div`
         border-radius: 4px;
         transition: all .4s;
         font-weight: 700;
+        font-size: 20px;
     }
 
     span:hover{

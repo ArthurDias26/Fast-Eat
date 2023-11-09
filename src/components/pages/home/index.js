@@ -1,6 +1,5 @@
 import { Home, Outdoor, Cards, Card, ButtonArea, MenuOptionsContainer, MenuOptions, Option, Map } from "./style"
 import LinkButton from '../../layout/linkButton'
-import seta from '../../../assets/images/seta-direita.png'
 
 import smartphoneIcon from '../../../assets/images/smartphone.png'
 import menuIcon from '../../../assets/images/cardapio.png'
@@ -17,11 +16,9 @@ export default function index() {
     return(
         <Home>
             <Outdoor>
-                    <div>
                         <h2>BEM VINDO A FAST EAT,</h2>
                         <h1>CONHEÇA NOSSO CARDAPIO.</h1>
-                        <LinkButton link='/menu' text={<img src={seta} alt='smartphone'/>}/>
-                    </div>
+                        <LinkButton link='/menu' text='Clique Aqui!'/>
             </Outdoor>
 
             <Cards>
