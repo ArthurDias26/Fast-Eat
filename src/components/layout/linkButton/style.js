@@ -7,9 +7,25 @@ export const LinkButton = styled.a`
     border-radius: 12px;
     background-color: ${props => props.theme.redlight};
     transition: all .35s;
-    font: 18;
 
     &:hover{
         background-color: ${props => props.theme.reddark};
     }
+
+    @media (max-width: 1024px) {
+    padding: 10px 38px;
+  
+   }
+
+   @media (max-width: 860px) {
+    padding: 8px 32px;
+    border-radius: 8px;
+
+  
+   }
+
+   @media (max-width: 560px) {
+    padding: 6px 26px;
+  
+   }
 `

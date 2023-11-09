@@ -17,14 +17,15 @@ export const Outdoor = styled.section`
    padding: 12vh 0 0 3vw;
    color: ${props => props.theme.orange};
 
+   h2{
+      font-size: 2.5vw;
+   }
+
    h1{
       margin-bottom: 35px;
       font-size: 4.5vw;
    }
 
-   a{
-
-   }
 
    img{
       max-width: 100%;
@@ -32,9 +33,41 @@ export const Outdoor = styled.section`
       transform: rotate(270deg);
    }
 
-   @media (max-width: 800px) {
+   @media (max-width: 860px) {
     background-size: 100%;
     background-position: bottom;
+
+    a{
+      font-size: 22px;
+    }
+
+    h2{
+      font-size: 3vw;
+   }
+
+   h1{
+      margin-bottom: 15px;
+      font-size:5vw;
+   }
+
+   }
+
+   @media (max-width: 560px) {
+    background-size: 100%;
+    background-position: bottom;
+
+    a{
+      font-size: 16px;
+    }
+
+    h2{
+      font-size: 3.4vw;
+   }
+
+   h1{
+      margin-bottom: 10px;
+      font-size:5.6vw;
+   }
 
    }
 
@@ -88,7 +121,7 @@ export const MenuOptionsContainer = styled.section`
    justify-content: center;
 
    h1{
-      font-size: 2vw;
+      font-size: 28px;
       margin-bottom: 3.5vh;
       color: ${props => props.theme.orange};
    }
@@ -103,6 +136,20 @@ export const MenuOptions = styled.div`
    align-items: center;
    justify-content: center;
    width: 80vw;
+
+   @media (max-width: 560px) {
+      flex-direction: column;
+
+      a{
+         width: 100%;
+         margin-bottom: 12px;
+      }
+
+      a:last-child{
+         margin-bottom: 0px;
+      }
+   }
+   
 `
 
 export const Option = styled.a`
