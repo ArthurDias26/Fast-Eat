@@ -27,7 +27,7 @@ export default function index() {
                     <Card>
                         <img src={smartphoneIcon} alt='smartphone'/>
                         <h2>Faça seu pedido em casa</h2>
-                        <p>Maecenas vel leo nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec at orci sit amet est accumsan semper nec vitae mi.</p>
+                        <p>Fça o pedido pelo site, no conforto de sua casa.</p>
                     </Card>
 
                     <Card>

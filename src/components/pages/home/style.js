@@ -61,12 +61,12 @@ export const Outdoor = styled.section`
     }
 
     h2{
-      font-size: 3.4vw;
+      font-size: 3.6vw;
    }
 
    h1{
       margin-bottom: 10px;
-      font-size:5.6vw;
+      font-size: 6.2vw;
    }
 
    }
@@ -78,31 +78,57 @@ export const Cards = styled.section`
    display: flex;
    justify-content: center;
    align-items: center;
+   flex-wrap: wrap;
    padding: 5vh 0;
 
    div.flex{
       display: flex;
       justify-content: space-around;
       width: 80%;
+
+   @media (max-width: 1440px) {
+      width: 100%;
+   }
+
+   @media (max-width: 640px) {
+      flex-direction: column;
+      align-items: center;
+   }
+      
    }
 
  
 `
 
 export const Card = styled.div`
-   padding: 4vh 2.5vw;
+   padding: 40px 15px;
    border-radius: 15px;
    background-color: white;
-   max-width: 20vw;
+   max-width: 25%;
    box-shadow: .5px .5px 4px #bbb;
    text-align: center;
+   font-size: 16px;
 
    h2{
       margin-top: 15px;
    }
 
    img{
-      width: 15vw;
+      width: 75%;
+   }
+
+   @media (max-width: 1600px) {
+   font-size: 14px;
+   }
+
+   @media (max-width: 800px) {
+   font-size: 12px;
+   max-width: 28%;
+   }
+
+   @media (max-width: 640px) {
+   max-width: 60%;
+   margin-bottom: 25px;
    }
 `
 

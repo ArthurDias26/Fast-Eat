@@ -10,6 +10,20 @@ export const HeaderBox = styled.header`
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 0 10px #444;
+    font-size: 20px;
+
+    @media (max-width: 1024px) {
+        font-size: 16px;
+
+        div img{
+            max-width: 8vh;
+        }
+    }
+
+    @media (max-width: 600px) {
+        font-size: 14px;
+    }
+
 `
 
 export const IconBox = styled.div`
@@ -32,9 +46,8 @@ export const MenuBox = styled.div`
         padding: 6px;
         margin-right: 2vw;
         border-radius: 4px;
-        transition: all .4s;
+        transition: all .25s;
         font-weight: 700;
-        font-size: 20px;
     }
 
     span:hover{
