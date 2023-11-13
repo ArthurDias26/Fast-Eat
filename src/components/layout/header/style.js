@@ -98,8 +98,12 @@ export const MenuMobile = styled.div`
         margin-top: 50px;
         font-size: 22px;
 
-        &:hover{
+        div:hover{
             background-color: ${(props) => props.theme.orange};
+
+            a span{
+                color: white;
+            }
         }
 
         span{

@@ -42,7 +42,7 @@ export default function Index() {
             { widthState >= 768 ? (
                 <>
                 <Link to={'/'}>
-                    <span>Ìnicio</span>
+                    <span>Início</span>
                 </Link>
 
                 <Link to={'/menu'}>
@@ -68,7 +68,7 @@ export default function Index() {
                         <button className='closeButton' onClick={toogleMenu}>X</button>            
 
                         <Link to={'/'}>
-                        <span>Ìnicio</span>
+                        <span>Início</span>
                         </Link>
 
                         <Link to={'/menu'}>

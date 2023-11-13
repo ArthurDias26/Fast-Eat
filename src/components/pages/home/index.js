@@ -17,7 +17,7 @@ export default function index() {
         <Home>
             <Outdoor>
                         <h2>BEM VINDO A FAST EAT,</h2>
-                        <h1>CONHEÇA NOSSO CARDAPIO!</h1>
+                        <h1>CONHEÇA NOSSO CARDÁPIO!</h1>
                         <LinkButton link='/menu' text='Clique Aqui'/>
             </Outdoor>
 
@@ -27,19 +27,19 @@ export default function index() {
                     <Card>
                         <img src={smartphoneIcon} alt='smartphone'/>
                         <h2>Faça seu pedido em casa</h2>
-                        <p>Fça o pedido pelo site, no conforto de sua casa.</p>
+                        <p> Compre pelo site para ter uma melhor comodidade, sem precisar sair de casa ou enfrentar filas e trânsito. Acesse o site, escolha seus pratos e aguardar a entrega.</p>
                     </Card>
 
                     <Card>
                         <img src={menuIcon} alt='smartphone'/>
                         <h2>Veja as opções do menu</h2>
-                        <p>Maecenas vel leo nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec at orci sit amet est accumsan semper nec vitae mi.</p>
+                        <p>Acesse o cardápio completo, escolha seus pratos favoritos e finalize o pedido em poucos cliques, com várias opções de pagamento, como cartão de crédito, débito e Pix.</p>
                     </Card>
 
                     <Card>
                         <img src={deliveryIcon} alt='smartphone'/>
                         <h2>Entrega em 30 minutos</h2>
-                        <p>Maecenas vel leo nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec at orci sit amet est accumsan semper nec vitae mi.</p>
+                        <p>Com a rapidez na entrega você pode receber seus pratos em poucos minutos, acompanhando o status do seu pedido em tempo real, garantindo sua comida quentinha e saborosa.</p>
                     </Card>
 
                 </div>

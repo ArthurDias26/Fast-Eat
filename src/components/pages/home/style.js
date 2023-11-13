@@ -110,7 +110,7 @@ export const Card = styled.div`
    font-size: 16px;
 
    h2{
-      margin-top: 15px;
+      margin: 18px 0 5px 0;
    }
 
    img{
