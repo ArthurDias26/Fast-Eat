@@ -38,7 +38,7 @@ export default function index() {
 
                     <Card>
                         <img src={deliveryIcon} alt='smartphone'/>
-                        <h2>Entrega em 30 minutos</h2>
+                        <h2>Velocidade na entrega</h2>
                         <p>Com a rapidez na entrega você pode receber seus pratos em poucos minutos, acompanhando o status do seu pedido em tempo real, garantindo sua comida quentinha e saborosa.</p>
                     </Card>
 
