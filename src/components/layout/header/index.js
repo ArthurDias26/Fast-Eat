@@ -39,7 +39,7 @@ export default function Index() {
 
             <MenuBox>
 
-            { widthState >= 1125 ? (
+            { widthState >= 768 ? (
                 <>
                 <Link to={'/'}>
                     <span>Ìnicio</span>

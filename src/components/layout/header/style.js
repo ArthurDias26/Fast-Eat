@@ -68,7 +68,7 @@ export const MenuMobile = styled.div`
     align-items: center;
     position: fixed;
     height: 100vh;
-    width: 60vw;
+    width: 65vw;
     background-color: ${(props) => props.theme.reddark};
     color: black;
     z-index: 10;
@@ -93,7 +93,7 @@ export const MenuMobile = styled.div`
         cursor: pointer;
     }
 
-    div a{
+    div.button{
         display: block;
         margin-top: 50px;
         font-size: 22px;
@@ -101,9 +101,13 @@ export const MenuMobile = styled.div`
         &:hover{
             background-color: ${(props) => props.theme.orange};
         }
+
+        span{
+            margin: 0;
+        }
     }
 
-    span{
+    a span{
         font-size: 22px;
         display: block;
         margin-top: 25px;
@@ -122,7 +126,7 @@ export const SocialIcons = styled.div`
 
     p{
         text-align: center;
-        margin-bottom: -12px;
+        margin-bottom: 15px;
     }
 
     div{
