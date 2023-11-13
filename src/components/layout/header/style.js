@@ -54,3 +54,96 @@ export const MenuBox = styled.div`
         color: ${props => props.theme.reddark};
     }
 `
+
+export const MenuIcon = styled.div`
+    img{
+        max-width: 35px !important;
+    }
+`
+
+export const MenuMobile = styled.div`
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+    width: 60vw;
+    background-color: ${(props) => props.theme.reddark};
+    color: black;
+    z-index: 10;
+    color: white;
+    top: 0;
+    right: -65vw;
+    transition: all .4s;
+
+    &.is-open{
+        right: 0;
+    }
+
+    .closeButton{
+        position: absolute;
+        right:12px;
+        top: 12px;
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 32px;
+        font-weight: 300;
+        cursor: pointer;
+    }
+
+    div a{
+        display: block;
+        margin-top: 50px;
+        font-size: 22px;
+
+        &:hover{
+            background-color: ${(props) => props.theme.orange};
+        }
+    }
+
+    span{
+        font-size: 22px;
+        display: block;
+        margin-top: 25px;
+
+        &:hover{
+            color: ${(props) => props.theme.yelow};
+        }
+    }
+`
+
+export const SocialIcons = styled.div`
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+
+    p{
+        text-align: center;
+        margin-bottom: -12px;
+    }
+
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        
+        a{
+            padding: 8px 8px 3px 8px;
+            border-radius: 14px;
+            transition: all .2s;
+        }
+
+        img{
+            width: 35px;
+            height: 35px;
+        }
+
+        a:hover{
+            background-color: ${props => props.theme.redlight};
+        }
+    }
+`
