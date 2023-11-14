@@ -1,47 +1,213 @@
 {
     "Tudo": [
-        {
-            "title": "Pizza 1",
-            "id": 1,
-            "Ingredientes": "queijo, presunto. calabresa, bacon",
-            "price": 399.99,
-            "Image": "../../../assets/images/pizza.png"
-        }
+      
     ],
     "Pizza": [
         {
-            "title": "Pizza 1",
+            "title": "4 QUEIJOS",
             "id": 1,
-            "Ingredientes": "queijo, presunto. calabresa, bacon",
-            "price": 399.99,
-            "Image": "../../../assets/images/pizza.png"
+            "ingredientes": "Queijo, requeijão, oregano e parmesão ralado.",
+            "price": 39.99,
+            "image": "https://i.imgur.com/rbVQjaG.jpg"
+        },
+
+        {
+            "title": "CALABRESA",
+            "id": 2,
+            "ingredientes": "Queijo, calabresa e cebola, oregano.",
+            "price": 39.99,
+            "image": "https://imgur.com/1QNXIAm.jpg"
+        },
+
+        {
+            "title": "BACON E MILHO",
+            "id": 3,
+            "ingredientes": "Queijo, bacon, oregano e milho.",
+            "price": 39.99,
+            "image": "https://imgur.com/Dt5ETmq.jpg"
+        },
+        {
+            "title": "PEPPERONI",
+            "id": 4,
+            "ingredientes": "Queijo, oregano e pepperoni.",
+            "price": 39.99,
+            "image": "https://imgur.com/NsHgzyF.jpg"
+        },
+        {
+            "title": "4 QUEIJOS",
+            "id": 1,
+            "ingredientes": "Queijo, requeijão, oregano e parmesão ralado.",
+            "price": 39.99,
+            "image": "https://i.imgur.com/rbVQjaG.jpg"
+        },
+
+        {
+            "title": "CALABRESA",
+            "id": 2,
+            "ingredientes": "Queijo, calabresa e cebola, oregano.",
+            "price": 39.99,
+            "image": "https://imgur.com/1QNXIAm.jpg"
+        },
+
+        {
+            "title": "BACON E MILHO",
+            "id": 3,
+            "ingredientes": "Queijo, bacon, oregano e milho.",
+            "price": 39.99,
+            "image": "https://imgur.com/Dt5ETmq.jpg"
+        },
+        {
+            "title": "PEPPERONI",
+            "id": 4,
+            "ingredientes": "Queijo, oregano e pepperoni.",
+            "price": 39.99,
+            "image": "https://imgur.com/NsHgzyF.jpg"
+        },
+        {
+            "title": "4 QUEIJOS",
+            "id": 1,
+            "ingredientes": "Queijo, requeijão, oregano e parmesão ralado.",
+            "price": 39.99,
+            "image": "https://i.imgur.com/rbVQjaG.jpg"
+        },
+
+        {
+            "title": "CALABRESA",
+            "id": 2,
+            "ingredientes": "Queijo, calabresa e cebola, oregano.",
+            "price": 39.99,
+            "image": "https://imgur.com/1QNXIAm.jpg"
+        },
+
+        {
+            "title": "BACON E MILHO",
+            "id": 3,
+            "ingredientes": "Queijo, bacon, oregano e milho.",
+            "price": 39.99,
+            "image": "https://imgur.com/Dt5ETmq.jpg"
+        },
+        {
+            "title": "PEPPERONI",
+            "id": 4,
+            "ingredientes": "Queijo, oregano e pepperoni.",
+            "price": 39.99,
+            "image": "https://imgur.com/NsHgzyF.jpg"
+        },
+        {
+            "title": "4 QUEIJOS",
+            "id": 1,
+            "ingredientes": "Queijo, requeijão, oregano e parmesão ralado.",
+            "price": 39.99,
+            "image": "https://i.imgur.com/rbVQjaG.jpg"
+        },
+
+        {
+            "title": "CALABRESA",
+            "id": 2,
+            "ingredientes": "Queijo, calabresa e cebola, oregano.",
+            "price": 39.99,
+            "image": "https://imgur.com/1QNXIAm.jpg"
+        },
+
+        {
+            "title": "BACON E MILHO",
+            "id": 3,
+            "ingredientes": "Queijo, bacon, oregano e milho.",
+            "price": 39.99,
+            "image": "https://imgur.com/Dt5ETmq.jpg"
+        },
+        {
+            "title": "PEPPERONI",
+            "id": 4,
+            "ingredientes": "Queijo, oregano e pepperoni.",
+            "price": 39.99,
+            "image": "https://imgur.com/NsHgzyF.jpg"
         }
     ],
     "Esfirra": [
         {
-            "title": "Esfirra 1",
-            "id": 2,
-            "Ingredientes": "queijo, presunto. calabresa, bacon",
-            "price": 399.99,
-            "Image": "../../../assets/images/pizza.png"
+            "title": "Esfirra carne",
+            "id": 5,
+            "ingredientes": "Carne temperada com limão, tomate, tahine, cebola e tempero especial.",
+            "price": 8.99,
+            "image": "https://imgur.com/2CNe1eU.jpg"
+        },
+        {
+            "title": "Esfirra carne",
+            "id": 5,
+            "ingredientes": "Carne temperada com limão, tomate, tahine, cebola e tempero especial.",
+            "price": 8.99,
+            "image": "https://imgur.com/2CNe1eU.jpg"
+        },
+        {
+            "title": "Esfirra carne",
+            "id": 5,
+            "ingredientes": "Carne temperada com limão, tomate, tahine, cebola e tempero especial.",
+            "price": 8.99,
+            "image": "https://imgur.com/2CNe1eU.jpg"
+        },
+        {
+            "title": "Esfirra carne",
+            "id": 5,
+            "ingredientes": "Carne temperada com limão, tomate, tahine, cebola e tempero especial.",
+            "price": 8.99,
+            "image": "https://imgur.com/2CNe1eU.jpg"
         }
     ],
     "Bebida": [
         {
-            "title": "Coca-Cola",
-            "id": 3,
-            "Ingredientes": "queijo, presunto. calabresa, bacon",
-            "price": 399.99,
-            "Image": "../../../assets/images/pizza.png"
+            "title": "Coca-Cola 2L Original - Pet",
+            "id": 22,
+            "price": 10.99,
+            "image": "https://imgur.com/CqA1F7C.png"
+        },
+        {
+            "title": "Coca-Cola 220Ml Original Lata",
+            "id": 23,
+            "price": 10.99,
+            "image": "https://i.imgur.com/NrBTALG.jpg"
+        },
+        {
+            "title": "Coca-Cola Sem Açúcar 2L",
+            "id": 25,
+            "price": 10.99,
+            "image": "https://imgur.com/Gb0JiuI.png"
+        },
+        {
+            "title": "Coca-Cola 350Ml Sem Açúcar Lata",
+            "id": 26,
+            "price": 10.99,
+            "image": "https://i.imgur.com/DrP9g7f.png"
         }
     ],
     "Sobremesa": [
         {
-            "title": "Kit-Kat",
-            "id": 4,
-            "Ingredientes": "queijo, presunto. calabresa, bacon",
-            "price": 399.99,
-            "Image": "../../../assets/images/pizza.png"
+            "title": "Churrosbread",
+            "id": 7,
+            "ingredientes": "Nossa saborosa massa recheada de muito doce de leite, coberta de açúcar e canela.",
+            "price": 19.99,
+            "image": "https://imgur.com/tl4qXZc.jpg"
+        },
+        {
+            "title": "Chocobread",
+            "id": 8,
+            "ingredientes": "Massa recheada de muito chocolate e cobertura de creme de baunilha com granulado.",
+            "price": 19.99,
+            "image": "https://imgur.com/gyYDZNe.jpg"
+        },
+        {
+            "title": "Brotinho de Brigadeiro",
+            "id": 9,
+            "ingredientes": "Brotinho de brigadeiro com creme de baunilha ,brigadeiro de chocolate e granulado.",
+            "price": 29.99,
+            "image": "https://imgur.com/yM7clbb.jpg"
+        },
+        {
+            "title": "Brotinho de Ovomaltine",
+            "id": 10,
+            "ingredientes": "Brotinho recheada com creme de baunilha e creme de Ovomaltine crocante..",
+            "price": 29.99,
+            "image": "https://imgur.com/OVZ6FUH.jpg"
         }
     ]
 }

@@ -45,9 +45,20 @@ export default function Index() {
 
             </FoodTypes>
 
+            {menuType === "Pizza" ? 'tamanho' : null}
+
+            {menuType === "Tudo" ? 'tamanho' : null}
+
             <FoodCards>
                 {Array.isArray(menuItens) ? menuItens.map((item) => (
-                <FoodCard key={item.id}>{item.title}</FoodCard>
+                    <FoodCard>
+                        
+                        <img src={item.image} alt={"imagem" + item.title}/>
+                        <h2>{item.title}</h2>
+                        <p>{item.ingredientes? item.ingredientes : null}</p>
+                        <p>R${item.price}</p>
+                        <button>Adicionar</button>
+                    </FoodCard>
                 )) :
                 null}
             </FoodCards>

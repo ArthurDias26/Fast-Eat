@@ -39,7 +39,53 @@ button{
 `
 
 export const FoodCards = styled.section`
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    margin-top: 40px;
+    width: 80vw;
+    flex-wrap: wrap;
 `
 
 export const FoodCard = styled.div`
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 12px;
+    width: 22%;
+    border-radius: 12px;
+    box-shadow: inset.5px .5px 1px #777;
+    box-shadow: .5px .5px 4px #bbb;
+    text-align: center;
+    margin-bottom: 25px;
+
+    
+    img{
+        width: 100%;
+        height: 15vw;
+        border-radius: 4px;
+    }
+
+    h2, p{
+        margin-top: 5px;
+    }
+
+    button{
+        margin-top: 10px;
+        padding: 10px 24px;
+        background-color: ${(props) => props.theme.redlight};
+        border-radius: 8px;
+        border: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all .2s;
+    }
+
+    button:hover{
+        background-color: ${(props) => props.theme.reddark};
+    }
 `
