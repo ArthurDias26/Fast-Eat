@@ -9,24 +9,21 @@ export default function Index() {
 
     useEffect(() =>{
         setMenuItens(MenuItens)
-        if (menuType == 'Tudo'){
+        if (menuType === 'Tudo'){
             setMenuItens(MenuItens.Tudo)
-            console.log('foi')
         }
-        else if (menuType == 'Pizza'){
+        else if (menuType === 'Pizza'){
             setMenuItens(MenuItens.Pizza)
         }
-        else if (menuType == 'Esfirra'){
+        else if (menuType === 'Esfirra'){
             setMenuItens(MenuItens.Esfirra)
         }
-        else if (menuType == 'Bebida'){
+        else if (menuType === 'Bebida'){
             setMenuItens(MenuItens.Bebida)
         }
-        else if (menuType == 'Sobremesa'){
+        else if (menuType === 'Sobremesa'){
             setMenuItens(MenuItens.Sobremesa)
         }
-        console.log(menuType)
-        console.log(menuItens)
     }, [menuType])
 
     return(
@@ -49,9 +46,10 @@ export default function Index() {
             </FoodTypes>
 
             <FoodCards>
-                {menuItens.Pizza?.map((item) => (
-                <h1>{item.title}</h1>
-                ))}
+                {Array.isArray(menuItens) ? menuItens.map((item) => (
+                <FoodCard key={item.id}>{item.title}</FoodCard>
+                )) :
+                null}
             </FoodCards>
         </FoodMenu>
         

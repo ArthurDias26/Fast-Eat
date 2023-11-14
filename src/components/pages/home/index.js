@@ -81,7 +81,7 @@ export default function index() {
             </MenuOptionsContainer>
 
             <Map>
-                <h1>Loaclização</h1>
+                <h1>Localização</h1>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1572.146981706316!2d-50.08025029270346!3d-20.415159622168208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9497e30d7fa80c73%3A0xf021bae45d284a03!2sPizzaria%20Nappi!5e0!3m2!1spt-BR!2sbr!4v1699462111354!5m2!1spt-BR!2sbr" title="Map"/>
                 <a href="https://www.google.com/maps/dir//Pizzaria+Nappi,+Av.+Carlos+Glerian,+194+-+Jd.+Monte+Belo,+Valentim+Gentil+-+SP,+15520-000/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x9497e30d7fa80c73:0xf021bae45d284a03!3e0?sa=X&ved=2ahUKEwiesOWD87SCAxXSLrkGHXcNC-0Qox16BAgSEAA" target="_blank" rel="noreferrer">Veja a melhor rota</a>
             </Map>

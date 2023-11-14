@@ -1,8 +1,17 @@
 {
-    "Tudo": [],
+    "Tudo": [
+        {
+            "title": "Pizza 1",
+            "id": 1,
+            "Ingredientes": "queijo, presunto. calabresa, bacon",
+            "price": 399.99,
+            "Image": "../../../assets/images/pizza.png"
+        }
+    ],
     "Pizza": [
         {
             "title": "Pizza 1",
+            "id": 1,
             "Ingredientes": "queijo, presunto. calabresa, bacon",
             "price": 399.99,
             "Image": "../../../assets/images/pizza.png"
@@ -11,6 +20,7 @@
     "Esfirra": [
         {
             "title": "Esfirra 1",
+            "id": 2,
             "Ingredientes": "queijo, presunto. calabresa, bacon",
             "price": 399.99,
             "Image": "../../../assets/images/pizza.png"
@@ -19,6 +29,7 @@
     "Bebida": [
         {
             "title": "Coca-Cola",
+            "id": 3,
             "Ingredientes": "queijo, presunto. calabresa, bacon",
             "price": 399.99,
             "Image": "../../../assets/images/pizza.png"
@@ -27,6 +38,7 @@
     "Sobremesa": [
         {
             "title": "Kit-Kat",
+            "id": 4,
             "Ingredientes": "queijo, presunto. calabresa, bacon",
             "price": 399.99,
             "Image": "../../../assets/images/pizza.png"
