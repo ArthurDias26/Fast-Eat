@@ -18,6 +18,8 @@ export const ContactContainer = styled.div`
             width: 100%;
             text-align: center;
             margin-bottom: 6vh;
+            font-size: 44px;
+
         }
 
         @media (max-width: 768px) {
@@ -56,6 +58,7 @@ export const ContactForm = styled.div`
         padding: 12px;
         border-radius: 4px;        
         font-size: 16px;
+        font-family: 'nunito', sans-serif;
     }
 
     div.error_message{
@@ -114,6 +117,17 @@ export const ContactNotes = styled.div`
     h3{
         font-size: 1.45;
         margin: 25px 0 15px 0;
+    }
+
+    a{
+        color: black;
+        font-size: 32px;
+        padding: 0 10px;
+        transition: all .35s;
+
+        &:hover{
+            color: ${(props) => props.theme.redlight};
+        }
     }
 
     @media (max-width: 1050px) {

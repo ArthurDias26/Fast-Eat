@@ -56,9 +56,7 @@ export const MenuBox = styled.div`
 `
 
 export const MenuIcon = styled.div`
-    img{
-        max-width: 35px !important;
-    }
+    font-size: 42px;
 `
 
 export const MenuMobile = styled.div`
@@ -143,11 +141,13 @@ export const SocialIcons = styled.div`
             padding: 8px 8px 3px 8px;
             border-radius: 14px;
             transition: all .2s;
+            font-size: 26px;
+            color: white;
+            padding: 0 8px;
         }
 
-        img{
-            width: 35px;
-            height: 35px;
+        a:hover{
+            color: ${props => props.theme.reddark};
         }
 
         a:hover{

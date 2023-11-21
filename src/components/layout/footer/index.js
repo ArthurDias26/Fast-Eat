@@ -1,7 +1,6 @@
 import { FooterBox, FlexBox, SocialIcons } from "./style"
-import instagramLogo from '../../../assets/images/instagram-icon.png'
-import facebookLogo from '../../../assets/images/facebook-icon.png'
-import twitterLogo from '../../../assets/images/twitter-icon.png'
+
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 
 export default function index() {
@@ -36,9 +35,9 @@ export default function index() {
                 <p>Siga nossas redes sociais:</p>
 
                 <div>
-                    <a href="/"><img src={instagramLogo} alt='logo instagram'/></a>
-                    <a href="/"><img src={facebookLogo} alt='logo instagram'/></a>
-                    <a href="/"><img src={twitterLogo} alt='logo instagram'/></a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><FaInstagram/></a>
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" rel="noreferrer"><FaFacebook/></a>
+                    <a href="https://wa.me//5517991266168" target="_blank" rel="noreferrer"><FaWhatsapp/></a>
                 </div>
 
             </SocialIcons>

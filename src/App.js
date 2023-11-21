@@ -9,7 +9,6 @@ import Footer from './components/layout/footer'
 
 import Home from './components/pages/home'
 import Checkout from './components/pages/checkout'
-import Reserve from './components/pages/reserve'
 import Menu from './components/pages/menu'
 import Conatact from './components/pages/contact'
 import NotFound from './components/pages/not_found'
@@ -26,7 +25,6 @@ function App() {
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/checkout' element={<Checkout/>}/>
-            <Route path='/reserve' element={<Reserve/>}/>
             <Route path='/menu' element={<Menu/>}/>
             <Route path='/contact' element={<Conatact/>}/>
             <Route path='*' element={<NotFound/>}/>

@@ -35,6 +35,8 @@ export const FoodTypes = styled.div`
     width: 80%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 
     @media (max-width: 1080px) {
         width: 90%;
@@ -65,8 +67,8 @@ export const FoodTypes = styled.div`
         }
 
         @media (max-width: 620px) {
-        font-size: 12px;
-        padding: 6px 0;
+            min-width: 30%;
+            padding: 6px 0;
         }
 }
 `

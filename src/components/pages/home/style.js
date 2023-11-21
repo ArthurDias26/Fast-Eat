@@ -35,7 +35,7 @@ export const Outdoor = styled.section`
 
    @media (max-width: 860px) {
     background-size: 100%;
-    background-position: bottom;
+    background-position: 0% 85%;
 
     a{
       font-size: 26px;
@@ -53,8 +53,6 @@ export const Outdoor = styled.section`
    }
 
    @media (max-width: 680px) {
-    background-size: 100%;
-    background-position: bottom;
 
     a{
       font-size: 26px;

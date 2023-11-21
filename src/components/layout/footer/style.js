@@ -10,19 +10,11 @@ padding: 15px;
     @media (max-width: 920px) {
         font-size: 14px;
 
-        div div img{
-            width: 25px;
-            height: 25px;
-    }
     }
 
     @media (max-width: 680px) {
         font-size: 12px;
 
-        div div img{
-            width: 20px;
-            height: 20px;
-    }
     }
 
     @media (max-width: 480px) {
@@ -60,20 +52,25 @@ export const SocialIcons = styled.div`
         align-items: center;
         justify-content: center;
         flex-direction: row !important;
+        margin-top: 8px;
         
         a{
-            padding: 8px 8px 3px 8px;
-            border-radius: 14px;
             transition: all .2s;
-        }
+            font-size: 32px;
+            color: white;
+            padding: 0 8px;
 
-        img{
-            width: 35px;
-            height: 35px;
+            @media (max-width: 860px) {
+                font-size: 28px;    
+            }
+
+            @media (max-width: 520px) {
+                font-size: 22px;    
+            }
         }
 
         a:hover{
-            background-color: ${props => props.theme.reddark};
+            color: ${props => props.theme.reddark};
         }
     }
 `

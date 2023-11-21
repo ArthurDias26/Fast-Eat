@@ -3,7 +3,7 @@ import { ContactContainer, ContactForm, ContactNotes } from './style'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as yup from 'yup'
 
-import {FaPhoneAlt, FaWhatsapp} from 'react-icons/fa'
+import {FaPhoneAlt, FaFacebook, FaInstagram, FaWhatsapp} from 'react-icons/fa'
 import {MdEmail} from 'react-icons/md'
 import {RiMapPin2Fill} from 'react-icons/ri'
 
@@ -49,7 +49,7 @@ export default function index() {
                         <Field type='text' id='message' as='textarea' rows='10' name='message'/>
                         <div className='error_message'><ErrorMessage name='message'/></div>
 
-                        <button type='submit' disabled={!isValid} className={isValid ? 'valid' : ''}>Submit <FaWhatsapp/></button>
+                        <button type='submit' disabled={!isValid} className={isValid ? 'valid' : ''}>Enviar <FaWhatsapp/></button>
                     </Form>
 
                     )}
@@ -67,6 +67,12 @@ export default function index() {
 
                     <li><FaPhoneAlt/> Telefone (17)99170-7070</li>
                 </ul>
+
+            <h3>Nossas redes sociais:</h3>
+
+                <a href="https://www.instagram.com/" rel="noreferrer"><FaInstagram/></a>
+                <a href="https://www.facebook.com/?locale=pt_BR" rel="noreferrer"><FaFacebook/></a>
+                <a href="https://wa.me//5517991266168" rel="noreferrer"><FaWhatsapp/></a>
 
             </ContactNotes>
         </div>
