@@ -11,30 +11,63 @@ export const MenuTitle = styled.section`
     align-items: center;
     font-size: 64px;
     padding: 50px 0 50px 25px;
+
+    @media (max-width: 1080px) {
+        font-size: 52px;
+    }
+
+    @media (max-width: 820px) {
+        font-size: 44px;
+    }
+
+    @media (max-width: 540px) {
+        font-size: 36px;
+    }
+    @media (max-width: 460px) {
+        font-size: 32px;
+    }
 `
 
 export const FoodTypes = styled.div`
-margin: auto;
-margin-top: 25px;
-display: block;
-width: 80%;
-display: flex;
-align-items: center;
+    margin: auto;
+    margin-top: 25px;
+    display: block;
+    width: 80%;
+    display: flex;
+    align-items: center;
 
-button{
-    width: 20%;
-    padding: 8px 0;
-    background-color: ${(props) => props.theme.redlight};
-    color: white;
-    transition: all .2s;
-    font-size: 18px;
-    border: 1px solid white;
-    border-radius: 4px;
-    cursor: pointer;
-
-    &:hover{
-        background-color: ${(props) => props.theme.reddark};
+    @media (max-width: 1080px) {
+        width: 90%;
     }
+
+    button{
+        width: 20%;
+        padding: 8px 0;
+        background-color: ${(props) => props.theme.redlight};
+        color: white;
+        transition: all .2s;
+        font-size: 18px;
+        border: 1px solid white;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: ${(props) => props.theme.reddark};
+        }
+
+        @media (max-width: 1080px) {
+        font-size: 16px;
+        }
+
+        @media (max-width: 820px) {
+        font-size: 14px;
+        padding: 6px 0;
+        }
+
+        @media (max-width: 620px) {
+        font-size: 12px;
+        padding: 6px 0;
+        }
 }
 `
 
@@ -62,10 +95,24 @@ export const FoodCard = styled.div`
     text-align: center;
     margin-bottom: 25px;
 
+    @media (max-width: 1080px) {
+        width: 28%;
+        font-size: 14px;
+    }
+
+    @media (max-width: 820px) {
+        width: 35%;
+        font-size: 14px;
+    }
+
+    @media (max-width: 620px) {
+        width: 75%;
+        font-size: 14px;
+    }
+
     
     img{
         width: 100%;
-        height: 15vw;
         border-radius: 4px;
     }
 
