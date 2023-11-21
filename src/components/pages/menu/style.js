@@ -74,7 +74,6 @@ export const FoodTypes = styled.div`
 export const FoodCards = styled.section`
     display: flex;
     justify-content: space-around;
-    align-items: center;
     margin: auto;
     margin-top: 40px;
     width: 80vw;

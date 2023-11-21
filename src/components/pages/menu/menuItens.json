@@ -1,7 +1,4 @@
 {
-    "Tudo": [
-      
-    ],
     "Pizza": [
         {
             "title": "4 QUEIJOS",
@@ -171,7 +168,7 @@
             "title": "Coca-Cola Sem Açúcar 2L",
             "id": 25,
             "price": 10.99,
-            "image": "https://imgur.com/Gb0JiuI.png"
+            "image": "https://i.imgur.com/4DYnCLX.png"
         },
         {
             "title": "Coca-Cola 350Ml Sem Açúcar Lata",

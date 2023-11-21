@@ -10,7 +10,7 @@ export default function Index() {
     useEffect(() =>{
         setMenuItens(MenuItens)
         if (menuType === 'Tudo'){
-            setMenuItens(MenuItens.Tudo)
+            setMenuItens([...MenuItens.Pizza, ...MenuItens.Esfirra, ...MenuItens.Bebida, ...MenuItens.Sobremesa])
         }
         else if (menuType === 'Pizza'){
             setMenuItens(MenuItens.Pizza)
