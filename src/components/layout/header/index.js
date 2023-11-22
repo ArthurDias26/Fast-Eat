@@ -34,6 +34,12 @@ export default function Index() {
 
     useEffect(()=> setView())
 
+    useEffect(()=> {
+        if(cart.length >=1) {
+            setIsCartOpen(true)
+        }
+    }, [cart])
+
     return(
         <HeaderBox>
 
@@ -72,12 +78,15 @@ export default function Index() {
                             {cart.map((item, index) => (
                                 <CartItem key={index}>
                                     <img src={item.image} alt={item.title}/>
-                                    <h3>{item.title}</h3>
-                                    <button onClick={() => RemoveItemCart(item.id)}>Remove</button>
+                                    <div>
+                                        <h3>{item.title}</h3>
+                                        <p>{item.ingredientes ? item.ingredientes : ''}</p>
+                                        <p>R${item.price}</p>
+                                        <button onClick={() => RemoveItemCart(item.id)} className='remove'>Remove</button>
+                                    </div>
                                 </CartItem>
                             ))}
 
-                            <button onClick={() => ClearCart()}>Limpar Carrinho</button>
                         </CartList>
               ) : (
                 <p className='no_games_message'>There are no saved games</p>

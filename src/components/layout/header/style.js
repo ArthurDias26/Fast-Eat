@@ -59,11 +59,17 @@ export const CartContainer = styled.div`
 
     width: max-content;
     display: inline;
+    color: black;
+
+    svg{
+        color: white;
+    }
+
     button{
         background-color: transparent;
         border: none;
         font-size: 32px;
-        color: white;
+        color: black;
         transition: all .35s;
         cursor: pointer;
 
@@ -71,16 +77,28 @@ export const CartContainer = styled.div`
             color: ${(props) => props.theme.reddark};
         }
     }
+
+    button.close{
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        z-index: 10;
+    }
+
 `
 
 export const CartBox = styled.div`
+
     position: fixed;
     top: 0;
     right: -65vw;
     height: 100vh;
-    width: 65vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 30vw;
     background-color: white;
     color: black;
+    transition: all .45s;
 
     &.active{
         top: 0;
@@ -89,11 +107,46 @@ export const CartBox = styled.div`
 `
 
 export const CartList = styled.div`
+    padding: 12px;
+    overflow: auto;
+
     
 `
 
 export const CartItem = styled.div`
-    
+    display: flex;
+    margin-bottom: 30px;
+
+    img{
+        max-width: 40%;
+        border-radius: 8px;
+    }
+
+    div{
+        width: 100%;
+        position: relative;
+    }
+
+    h3{
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+
+    button.remove{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 6px 10px;
+        border-radius: 8px;
+        background-color: ${(props) => props.theme.redlight};
+        color: white;
+        font-size: 24px;
+
+        &:hover{
+            background-color: ${(props) => props.theme.reddark};
+        }
+    }
 `
 
 export const MenuIcon = styled.div`
