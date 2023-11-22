@@ -1,4 +1,6 @@
-import { useState, createContext } from "react";
+import { json } from "react-router-dom";
+import usePersistenceState from "../utilities/usePersistenceState";
+import { useState, useEffect, createContext } from "react";
 
 export const CartContext = createContext()
 
@@ -7,6 +9,16 @@ export const CartContext = createContext()
 
 
     const [cart, setCart] = useState([])
+
+    useEffect(() => {
+
+        const cartPersistence = localStorage.getItem('cart')
+
+        if(cartPersistence){
+            setCart(JSON.parse(cartPersistence))
+        }
+
+    }, [])
 
     const CheckCartItems = (id, cart) => {
         const checkedCart = cart.filter((itemCart) => {
@@ -24,7 +36,7 @@ export const CartContext = createContext()
         if (item) {   
             const newCart = [item, ...cart]
             setCart(newCart)
-            console.log(item, newCart, cart)
+            localStorage.setItem('cart', JSON.stringify(newCart))
 
         }
 

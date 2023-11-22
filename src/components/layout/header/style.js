@@ -53,12 +53,19 @@ export const MenuBox = styled.div`
     span:hover{
         color: ${props => props.theme.reddark};
     }
+
+    @media (max-width: 768px) {
+        > div{
+            display: flex;
+            align-items: center;
+        }   
+    }
 `
 
 export const CartContainer = styled.div`
 
     width: max-content;
-    display: inline;
+    display: inline-block;
     color: black;
 
     svg{
@@ -84,6 +91,16 @@ export const CartContainer = styled.div`
         top: 12px;
         z-index: 10;
     }
+    
+    button.checkout{
+        width: 90%;
+        color: white;
+        display: block;
+        margin: auto;
+        padding: 8px 0;
+        border-radius: 8px;
+        background-color: ${(props) => props.theme.redlight};
+    }
 
 `
 
@@ -103,6 +120,10 @@ export const CartBox = styled.div`
     &.active{
         top: 0;
         right: 0;
+    }
+
+    @media (max-width: 1520px) {
+        
     }
 `
 
@@ -125,6 +146,10 @@ export const CartItem = styled.div`
     div{
         width: 100%;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     h3{
@@ -147,10 +172,25 @@ export const CartItem = styled.div`
             background-color: ${(props) => props.theme.reddark};
         }
     }
+
+    p{
+        max-width: 90%;
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    span{
+    color: black;
+        width: max-content;
+        padding: 0;
+        margin: 0;
+    }
 `
 
 export const MenuIcon = styled.div`
     font-size: 42px;
+    display: block;
+    margin-right: 16px;
 `
 
 export const MenuMobile = styled.div`

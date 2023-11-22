@@ -5,7 +5,8 @@
             "id": 1,
             "ingredientes": "Queijo, requeijão, oregano e parmesão ralado.",
             "price": 39.99,
-            "image": "https://i.imgur.com/rbVQjaG.jpg"
+            "image": "https://i.imgur.com/rbVQjaG.jpg",
+            "quantity": 0
         },
 
         {
@@ -13,7 +14,8 @@
             "id": 2,
             "ingredientes": "Queijo, calabresa e cebola, oregano.",
             "price": 39.99,
-            "image": "https://imgur.com/1QNXIAm.jpg"
+            "image": "https://imgur.com/1QNXIAm.jpg",
+            "quantity": 0
         },
 
         {
@@ -21,21 +23,24 @@
             "id": 3,
             "ingredientes": "Queijo, bacon, oregano e milho.",
             "price": 39.99,
-            "image": "https://imgur.com/Dt5ETmq.jpg"
+            "image": "https://imgur.com/Dt5ETmq.jpg",
+            "quantity": 0
         },
         {
             "title": "PEPPERONI",
             "id": 4,
             "ingredientes": "Queijo, oregano e pepperoni.",
             "price": 39.99,
-            "image": "https://imgur.com/NsHgzyF.jpg"
+            "image": "https://imgur.com/NsHgzyF.jpg",
+            "quantity": 0
         },
         {
             "title": "4 QUEIJOS",
             "id": 5,
             "ingredientes": "Queijo, requeijão, oregano e parmesão ralado.",
             "price": 39.99,
-            "image": "https://i.imgur.com/rbVQjaG.jpg"
+            "image": "https://i.imgur.com/rbVQjaG.jpg",
+            "quantity": 0
         },
 
         {
@@ -43,7 +48,8 @@
             "id": 6,
             "ingredientes": "Queijo, calabresa e cebola, oregano.",
             "price": 39.99,
-            "image": "https://imgur.com/1QNXIAm.jpg"
+            "image": "https://imgur.com/1QNXIAm.jpg",
+            "quantity": 0
         },
 
         {
@@ -51,21 +57,24 @@
             "id": 7,
             "ingredientes": "Queijo, bacon, oregano e milho.",
             "price": 39.99,
-            "image": "https://imgur.com/Dt5ETmq.jpg"
+            "image": "https://imgur.com/Dt5ETmq.jpg",
+            "quantity": 0
         },
         {
             "title": "PEPPERONI",
             "id": 8,
             "ingredientes": "Queijo, oregano e pepperoni.",
             "price": 39.99,
-            "image": "https://imgur.com/NsHgzyF.jpg"
+            "image": "https://imgur.com/NsHgzyF.jpg",
+            "quantity": 0
         },
         {
             "title": "4 QUEIJOS",
             "id": 9,
             "ingredientes": "Queijo, requeijão, oregano e parmesão ralado.",
             "price": 39.99,
-            "image": "https://i.imgur.com/rbVQjaG.jpg"
+            "image": "https://i.imgur.com/rbVQjaG.jpg",
+            "quantity": 0
         },
 
         {
@@ -73,7 +82,8 @@
             "id": 10,
             "ingredientes": "Queijo, calabresa e cebola, oregano.",
             "price": 39.99,
-            "image": "https://imgur.com/1QNXIAm.jpg"
+            "image": "https://imgur.com/1QNXIAm.jpg",
+            "quantity": 0
         },
 
         {
@@ -81,21 +91,24 @@
             "id": 11,
             "ingredientes": "Queijo, bacon, oregano e milho.",
             "price": 39.99,
-            "image": "https://imgur.com/Dt5ETmq.jpg"
+            "image": "https://imgur.com/Dt5ETmq.jpg",
+            "quantity": 0
         },
         {
             "title": "PEPPERONI",
             "id": 12,
             "ingredientes": "Queijo, oregano e pepperoni.",
             "price": 39.99,
-            "image": "https://imgur.com/NsHgzyF.jpg"
+            "image": "https://imgur.com/NsHgzyF.jpg",
+            "quantity": 0
         },
         {
             "title": "4 QUEIJOS",
             "id": 13,
             "ingredientes": "Queijo, requeijão, oregano e parmesão ralado.",
             "price": 39.99,
-            "image": "https://i.imgur.com/rbVQjaG.jpg"
+            "image": "https://i.imgur.com/rbVQjaG.jpg",
+            "quantity": 0
         },
 
         {
@@ -103,7 +116,8 @@
             "id": 14,
             "ingredientes": "Queijo, calabresa e cebola, oregano.",
             "price": 39.99,
-            "image": "https://imgur.com/1QNXIAm.jpg"
+            "image": "https://imgur.com/1QNXIAm.jpg",
+            "quantity": 0
         },
 
         {
@@ -111,14 +125,16 @@
             "id": 15,
             "ingredientes": "Queijo, bacon, oregano e milho.",
             "price": 39.99,
-            "image": "https://imgur.com/Dt5ETmq.jpg"
+            "image": "https://imgur.com/Dt5ETmq.jpg",
+            "quantity": 0
         },
         {
             "title": "PEPPERONI",
             "id": 16,
             "ingredientes": "Queijo, oregano e pepperoni.",
             "price": 39.99,
-            "image": "https://imgur.com/NsHgzyF.jpg"
+            "image": "https://imgur.com/NsHgzyF.jpg",
+            "quantity": 0
         }
     ],
     "Esfirra": [
@@ -127,28 +143,32 @@
             "id": 17,
             "ingredientes": "Carne temperada com limão, tomate, tahine, cebola e tempero especial.",
             "price": 8.99,
-            "image": "https://imgur.com/2CNe1eU.jpg"
+            "image": "https://imgur.com/2CNe1eU.jpg",
+            "quantity": 0
         },
         {
             "title": "Esfirra carne",
             "id": 18,
             "ingredientes": "Carne temperada com limão, tomate, tahine, cebola e tempero especial.",
             "price": 8.99,
-            "image": "https://imgur.com/2CNe1eU.jpg"
+            "image": "https://imgur.com/2CNe1eU.jpg",
+            "quantity": 0
         },
         {
             "title": "Esfirra carne",
             "id": 19,
             "ingredientes": "Carne temperada com limão, tomate, tahine, cebola e tempero especial.",
             "price": 8.99,
-            "image": "https://imgur.com/2CNe1eU.jpg"
+            "image": "https://imgur.com/2CNe1eU.jpg",
+            "quantity": 0
         },
         {
             "title": "Esfirra carne",
             "id": 20,
             "ingredientes": "Carne temperada com limão, tomate, tahine, cebola e tempero especial.",
             "price": 8.99,
-            "image": "https://imgur.com/2CNe1eU.jpg"
+            "image": "https://imgur.com/2CNe1eU.jpg",
+            "quantity": 0
         }
     ],
     "Bebida": [
@@ -156,25 +176,29 @@
             "title": "Coca-Cola 2L Original - Pet",
             "id": 21,
             "price": 10.99,
-            "image": "https://imgur.com/CqA1F7C.png"
+            "image": "https://imgur.com/CqA1F7C.png",
+            "quantity": 0
         },
         {
             "title": "Coca-Cola 220Ml Original Lata",
             "id": 22,
             "price": 10.99,
-            "image": "https://i.imgur.com/NrBTALG.jpg"
+            "image": "https://i.imgur.com/NrBTALG.jpg",
+            "quantity": 0
         },
         {
             "title": "Coca-Cola Sem Açúcar 2L",
             "id": 23,
             "price": 10.99,
-            "image": "https://i.imgur.com/4DYnCLX.png"
+            "image": "https://i.imgur.com/4DYnCLX.png",
+            "quantity": 0
         },
         {
             "title": "Coca-Cola 350Ml Sem Açúcar Lata",
             "id": 24,
             "price": 10.99,
-            "image": "https://i.imgur.com/DrP9g7f.png"
+            "image": "https://i.imgur.com/DrP9g7f.png",
+            "quantity": 0
         }
     ],
     "Sobremesa": [
@@ -183,28 +207,32 @@
             "id": 25,
             "ingredientes": "Nossa saborosa massa recheada de muito doce de leite, coberta de açúcar e canela.",
             "price": 19.99,
-            "image": "https://imgur.com/tl4qXZc.jpg"
+            "image": "https://imgur.com/tl4qXZc.jpg",
+            "quantity": 0
         },
         {
             "title": "Chocobread",
             "id": 26,
             "ingredientes": "Massa recheada de muito chocolate e cobertura de creme de baunilha com granulado.",
             "price": 19.99,
-            "image": "https://imgur.com/gyYDZNe.jpg"
+            "image": "https://imgur.com/gyYDZNe.jpg",
+            "quantity": 0
         },
         {
             "title": "Brotinho de Brigadeiro",
             "id": 27,
             "ingredientes": "Brotinho de brigadeiro com creme de baunilha ,brigadeiro de chocolate e granulado.",
             "price": 29.99,
-            "image": "https://imgur.com/yM7clbb.jpg"
+            "image": "https://imgur.com/yM7clbb.jpg",
+            "quantity": 0
         },
         {
             "title": "Brotinho de Ovomaltine",
             "id": 28,
             "ingredientes": "Brotinho recheada com creme de baunilha e creme de Ovomaltine crocante..",
             "price": 29.99,
-            "image": "https://imgur.com/OVZ6FUH.jpg"
+            "image": "https://imgur.com/OVZ6FUH.jpg",
+            "quantity": 0
         }
     ]
 }

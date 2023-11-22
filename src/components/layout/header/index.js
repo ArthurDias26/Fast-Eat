@@ -18,7 +18,7 @@ export default function Index() {
     const [isCartOpen, setIsCartOpen] = useState(false)
 
 
-     const {cart, AddCart, RemoveItemCart, ClearCart} = useContext(CartContext)   
+     const {cart, AddCart, RemoveItemCart} = useContext(CartContext)   
 
     const setView = () => {
         setWidthState(window.innerWidth)       
@@ -70,35 +70,78 @@ export default function Index() {
                         <FaShoppingCart onClick={toogleCart}/>
                     </button>
                     <CartBox className={isCartOpen ? 'active' : null}>
-                    {cart.length >= 1 ? (
-                        <CartList>
+                        {cart.length >= 1 ? (
+                            <CartList>
 
-                            <button className='close' onClick={toogleCart}>X</button>
+                                <button className='close' onClick={toogleCart}>X</button>
 
-                            {cart.map((item, index) => (
-                                <CartItem key={index}>
-                                    <img src={item.image} alt={item.title}/>
-                                    <div>
-                                        <h3>{item.title}</h3>
-                                        <p>{item.ingredientes ? item.ingredientes : ''}</p>
-                                        <p>R${item.price}</p>
-                                        <button onClick={() => RemoveItemCart(item.id)} className='remove'>Remove</button>
-                                    </div>
-                                </CartItem>
-                            ))}
+                                {cart.map((item, index) => (
+                                    <CartItem key={index}>
+                                        <img src={item.image} alt={item.title}/>
+                                        <div>
+                                            <h3>{item.title}</h3>
+                                            <p>{item.ingredientes ? item.ingredientes : ''}</p>
+                                            <p>R${item.price}</p>
+                                            <p>
+                                                <button>+</button>
+                                                <span> 0 </span>
+                                                <button>-</button>
+                                            </p>
+                                            <button onClick={() => RemoveItemCart(item.id)} className='remove'>Remove</button>
+                                        </div>
+                                    </CartItem>
+                                ))}
 
-                        </CartList>
-              ) : (
-                <p className='no_games_message'>There are no saved games</p>
-              )}
-                    </CartBox> 
+                                <button onClick={null} className='checkout'>Finalizar Compra</button>
+
+                            </CartList>
+                    ) : (
+                        <p className='empty-cart'>Não há itens no carrinho.</p>
+                    )}
+                </CartBox> 
                 </CartContainer>
                 </>
             ) : (
-                <>
+                <div>
                     <MenuIcon>
                     <IoIosMenu onClick={toogleMenu} />            
                     </MenuIcon>
+
+                    <CartContainer>
+                    <button>
+                        <FaShoppingCart onClick={toogleCart}/>
+                    </button>
+                    <CartBox className={isCartOpen ? 'active' : null}>
+                        {cart.length >= 1 ? (
+                            <CartList>
+
+                                <button className='close' onClick={toogleCart}>X</button>
+
+                                {cart.map((item, index) => (
+                                    <CartItem key={index}>
+                                        <img src={item.image} alt={item.title}/>
+                                        <div>
+                                            <h3>{item.title}</h3>
+                                            <p>{item.ingredientes ? item.ingredientes : ''}</p>
+                                            <p>R${item.price}</p>
+                                            <p>
+                                                <button>+</button>
+                                                <span> 0 </span>
+                                                <button>-</button>
+                                            </p>
+                                            <button onClick={() => RemoveItemCart(item.id)} className='remove'>Remove</button>
+                                        </div>
+                                    </CartItem>
+                                ))}
+
+                                <button onClick={null} className='checkout'>Finalizar Compra</button>
+
+                            </CartList>
+                    ) : (
+                        <p className='empty-cart'>Não há itens no carrinho.</p>
+                    )}
+                </CartBox> 
+                </CartContainer>
 
                     <MenuMobile className={isMenuOpen ? 'is-open' : ''}>
 
@@ -131,7 +174,7 @@ export default function Index() {
                     </SocialIcons>
 
                     </MenuMobile>
-                </>
+                </div>
             )}
                 
 
