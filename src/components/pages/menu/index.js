@@ -1,8 +1,11 @@
 import { FoodMenu, MenuTitle, FoodTypes, FoodCards, FoodCard } from "./style"
-import { useState, useEffect } from "react";
+import { useState, useEffect,useContext } from "react";
 import MenuItens from "./menuItens.json"
+import { CartContext } from "../../../contexts/CartContext";
 
 export default function Index() {
+
+    const {AddCart} = useContext(CartContext)
 
     const [menuItens, setMenuItens] = useState([])
     const [menuType, setMenuType] = useState('Tudo')
@@ -57,7 +60,7 @@ export default function Index() {
                         <h2>{item.title}</h2>
                         <p>{item.ingredientes? item.ingredientes : null}</p>
                         <p>R${item.price}</p>
-                        <button>Adicionar</button>
+                        <button onClick={() => AddCart(item)}>Adicionar</button>
                     </FoodCard>
                 )) :
                 null}

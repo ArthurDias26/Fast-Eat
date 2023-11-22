@@ -1,26 +1,35 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 
-import { HeaderBox, IconBox, MenuBox, MenuIcon, MenuMobile, SocialIcons } from "./style"
+import { HeaderBox, IconBox, MenuBox, MenuIcon, MenuMobile, SocialIcons, CartContainer, CartBox, CartList, CartItem } from "./style"
 import { Link } from "react-router-dom"
 
 import LinkButton from '../../layout/linkButton'
 import Logo from '../../../assets/images/entregawhite.png'
 
-import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaWhatsapp, FaShoppingCart } from "react-icons/fa";
 import { IoIosMenu } from "react-icons/io";
+
+import { CartContext } from "../../../contexts/CartContext";
 
 export default function Index() {
 
     const [widthState, setWidthState] = useState(0)
-    const [isOpen, setIsOpen] = useState(0)
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isCartOpen, setIsCartOpen] = useState(false)
+
+
+     const {cart, AddCart, RemoveItemCart, ClearCart} = useContext(CartContext)   
 
     const setView = () => {
         setWidthState(window.innerWidth)       
     }
 
     const toogleMenu = () =>{
-        setIsOpen((open) => !open)
-        console.log(isOpen)
+        setIsMenuOpen((open) => !open)
+    }
+
+    const toogleCart = () =>{
+        setIsCartOpen((open) => !open)
     }
 
     useEffect(()=> setView())
@@ -49,6 +58,32 @@ export default function Index() {
                 <Link to={'/contact'}>
                     <span>Contato</span>
                 </Link>
+
+                <CartContainer>
+                    <button>
+                        <FaShoppingCart onClick={toogleCart}/>
+                    </button>
+                    <CartBox className={isCartOpen ? 'active' : null}>
+                    {cart.length >= 1 ? (
+                        <CartList>
+
+                            <button className='close' onClick={toogleCart}>X</button>
+
+                            {cart.map((item, index) => (
+                                <CartItem key={index}>
+                                    <img src={item.image} alt={item.title}/>
+                                    <h3>{item.title}</h3>
+                                    <button onClick={() => RemoveItemCart(item.id)}>Remove</button>
+                                </CartItem>
+                            ))}
+
+                            <button onClick={() => ClearCart()}>Limpar Carrinho</button>
+                        </CartList>
+              ) : (
+                <p className='no_games_message'>There are no saved games</p>
+              )}
+                    </CartBox> 
+                </CartContainer>
                 </>
             ) : (
                 <>
@@ -56,7 +91,7 @@ export default function Index() {
                     <IoIosMenu onClick={toogleMenu} />            
                     </MenuIcon>
 
-                    <MenuMobile className={isOpen ? 'is-open' : ''}>
+                    <MenuMobile className={isMenuOpen ? 'is-open' : ''}>
 
                         <button className='closeButton' onClick={toogleMenu}>X</button>            
 

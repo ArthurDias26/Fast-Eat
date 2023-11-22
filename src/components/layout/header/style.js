@@ -55,6 +55,47 @@ export const MenuBox = styled.div`
     }
 `
 
+export const CartContainer = styled.div`
+
+    width: max-content;
+    display: inline;
+    button{
+        background-color: transparent;
+        border: none;
+        font-size: 32px;
+        color: white;
+        transition: all .35s;
+        cursor: pointer;
+
+        &:hover{
+            color: ${(props) => props.theme.reddark};
+        }
+    }
+`
+
+export const CartBox = styled.div`
+    position: fixed;
+    top: 0;
+    right: -65vw;
+    height: 100vh;
+    width: 65vw;
+    background-color: white;
+    color: black;
+
+    &.active{
+        top: 0;
+        right: 0;
+    }
+`
+
+export const CartList = styled.div`
+    
+`
+
+export const CartItem = styled.div`
+    
+`
+
 export const MenuIcon = styled.div`
     font-size: 42px;
 `

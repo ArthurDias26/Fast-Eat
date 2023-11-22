@@ -13,11 +13,15 @@ import Menu from './components/pages/menu'
 import Conatact from './components/pages/contact'
 import NotFound from './components/pages/not_found'
 
+import { CartProvider } from './contexts/CartContext';
+
 function App() {
   return (
       <Router>
 
         <ThemeProvider theme={theme}>
+        <CartProvider>
+          
         <Header/>
 
         <Main>
@@ -33,6 +37,8 @@ function App() {
         </Main>
 
         <Footer/>
+
+        </CartProvider>
         </ThemeProvider>
 
       </Router>
