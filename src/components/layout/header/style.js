@@ -122,9 +122,31 @@ export const CartBox = styled.div`
         right: 0;
     }
 
-    @media (max-width: 1520px) {
-        
+    div.empty-cart{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        font-size: 28px;
+        font-weight: bold;
     }
+
+    @media (max-width: 1440px) {
+        width: 40vw;
+    }
+
+    @media (max-width: 980px) {
+        width: 50vw;
+    }
+
+    @media (max-width: 768px) {
+        width: 65vw;
+
+        div.empty-cart{
+        font-size: 22px;
+    }
+    }
+
 `
 
 export const CartList = styled.div`

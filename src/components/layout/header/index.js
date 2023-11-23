@@ -20,6 +20,8 @@ export default function Index() {
 
      const {cart, AddCart, RemoveItemCart} = useContext(CartContext)   
 
+    const [CartItens, setCartItens] = useState([])
+
     const setView = () => {
         setWidthState(window.innerWidth)       
     }
@@ -35,9 +37,12 @@ export default function Index() {
     useEffect(()=> setView())
 
     useEffect(()=> {
+        setCartItens(cart)
+
         if(cart.length >=1) {
             setIsCartOpen(true)
         }
+
     }, [cart])
 
     return(
@@ -70,12 +75,12 @@ export default function Index() {
                         <FaShoppingCart onClick={toogleCart}/>
                     </button>
                     <CartBox className={isCartOpen ? 'active' : null}>
-                        {cart.length >= 1 ? (
+                        {CartItens.length >= 1 ? (
                             <CartList>
 
                                 <button className='close' onClick={toogleCart}>X</button>
 
-                                {cart.map((item, index) => (
+                                {CartItens.map((item, index) => (
                                     <CartItem key={index}>
                                         <img src={item.image} alt={item.title}/>
                                         <div>
@@ -84,7 +89,7 @@ export default function Index() {
                                             <p>R${item.price}</p>
                                             <p>
                                                 <button>+</button>
-                                                <span> 0 </span>
+                                                <span> {item.quantity} </span>
                                                 <button>-</button>
                                             </p>
                                             <button onClick={() => RemoveItemCart(item.id)} className='remove'>Remove</button>
@@ -96,7 +101,10 @@ export default function Index() {
 
                             </CartList>
                     ) : (
-                        <p className='empty-cart'>Não há itens no carrinho.</p>
+                        <div className='empty-cart'>
+                            <button className='close' onClick={toogleCart}>X</button>
+                            <p>Não há itens no carrinho.</p>
+                        </div>
                     )}
                 </CartBox> 
                 </CartContainer>
@@ -112,12 +120,12 @@ export default function Index() {
                         <FaShoppingCart onClick={toogleCart}/>
                     </button>
                     <CartBox className={isCartOpen ? 'active' : null}>
-                        {cart.length >= 1 ? (
+                        {CartItens.length >= 1 ? (
                             <CartList>
 
                                 <button className='close' onClick={toogleCart}>X</button>
 
-                                {cart.map((item, index) => (
+                                {CartItens.map((item, index) => (
                                     <CartItem key={index}>
                                         <img src={item.image} alt={item.title}/>
                                         <div>
@@ -138,7 +146,10 @@ export default function Index() {
 
                             </CartList>
                     ) : (
-                        <p className='empty-cart'>Não há itens no carrinho.</p>
+                        <div className='empty-cart'>
+                            <button className='close' onClick={toogleCart}>X</button>
+                            <p>Não há itens no carrinho.</p>
+                        </div>
                     )}
                 </CartBox> 
                 </CartContainer>

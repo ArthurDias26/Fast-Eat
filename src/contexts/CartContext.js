@@ -1,5 +1,3 @@
-import { json } from "react-router-dom";
-import usePersistenceState from "../utilities/usePersistenceState";
 import { useState, useEffect, createContext } from "react";
 
 export const CartContext = createContext()
@@ -32,9 +30,26 @@ export const CartContext = createContext()
 
     }
 
+    const AddItem = (item, cart) => {
+
+        const newCart = cart.filter((itemCart, index) => {
+            if (cart.length < 1){
+                return item
+            }
+
+            if(itemCart.id === item.id){
+                return cart
+            }
+        })
+
+        return [...newCart].length >= 1 ? newCart : [item, ...cart]
+
+    }
+
     const AddCart = (item) => {
         if (item) {   
-            const newCart = [item, ...cart]
+            item.quantity++
+            const newCart = AddItem(item, cart)
             setCart(newCart)
             localStorage.setItem('cart', JSON.stringify(newCart))
 
@@ -45,7 +60,7 @@ export const CartContext = createContext()
     const RemoveItemCart = (itemId) => {
         if (itemId) {
             const newCart = CheckCartItems(itemId, [...cart])     
-            setCart(newCart)
+            localStorage.setItem('cart', JSON.stringify(newCart))
         }
 
     }
