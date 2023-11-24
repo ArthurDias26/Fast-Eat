@@ -1,26 +1,23 @@
-import React, {useState, useEffect, useContext} from 'react'
+import React, {useState, useEffect} from 'react'
 
-import { HeaderBox, IconBox, MenuBox, MenuIcon, MenuMobile, SocialIcons, CartContainer, CartBox, CartList, CartItem } from "./style"
+import { HeaderBox, IconBox, MenuBox, MenuIcon, MenuMobile, SocialIcons} from "./style"
 import { Link } from "react-router-dom"
 
 import LinkButton from '../../layout/linkButton'
+import Cart from '../cart'
 import Logo from '../../../assets/images/entregawhite.png'
 
-import { FaFacebook, FaInstagram, FaWhatsapp, FaShoppingCart } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { IoIosMenu } from "react-icons/io";
 
-import { CartContext } from "../../../contexts/CartContext";
 
 export default function Index() {
 
     const [widthState, setWidthState] = useState(0)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-    const [isCartOpen, setIsCartOpen] = useState(false)
 
 
-     const {cart, AddCart, RemoveItemCart} = useContext(CartContext)   
 
-    const [CartItens, setCartItens] = useState([])
 
     const setView = () => {
         setWidthState(window.innerWidth)       
@@ -30,20 +27,8 @@ export default function Index() {
         setIsMenuOpen((open) => !open)
     }
 
-    const toogleCart = () =>{
-        setIsCartOpen((open) => !open)
-    }
-
     useEffect(()=> setView())
 
-    useEffect(()=> {
-        setCartItens(cart)
-
-        if(cart.length >=1) {
-            setIsCartOpen(true)
-        }
-
-    }, [cart])
 
     return(
         <HeaderBox>
@@ -70,44 +55,7 @@ export default function Index() {
                     <span>Contato</span>
                 </Link>
 
-                <CartContainer>
-                    <button>
-                        <FaShoppingCart onClick={toogleCart}/>
-                    </button>
-                    <CartBox className={isCartOpen ? 'active' : null}>
-                        {CartItens.length >= 1 ? (
-                            <CartList>
-
-                                <button className='close' onClick={toogleCart}>X</button>
-
-                                {CartItens.map((item, index) => (
-                                    <CartItem key={index}>
-                                        <img src={item.image} alt={item.title}/>
-                                        <div>
-                                            <h3>{item.title}</h3>
-                                            <p>{item.ingredientes ? item.ingredientes : ''}</p>
-                                            <p>R${item.price}</p>
-                                            <p>
-                                                <button>+</button>
-                                                <span> {item.quantity} </span>
-                                                <button>-</button>
-                                            </p>
-                                            <button onClick={() => RemoveItemCart(item.id)} className='remove'>Remove</button>
-                                        </div>
-                                    </CartItem>
-                                ))}
-
-                                <button onClick={null} className='checkout'>Finalizar Compra</button>
-
-                            </CartList>
-                    ) : (
-                        <div className='empty-cart'>
-                            <button className='close' onClick={toogleCart}>X</button>
-                            <p>Não há itens no carrinho.</p>
-                        </div>
-                    )}
-                </CartBox> 
-                </CartContainer>
+                <Cart/>
                 </>
             ) : (
                 <div>
@@ -115,44 +63,7 @@ export default function Index() {
                     <IoIosMenu onClick={toogleMenu} />            
                     </MenuIcon>
 
-                    <CartContainer>
-                    <button>
-                        <FaShoppingCart onClick={toogleCart}/>
-                    </button>
-                    <CartBox className={isCartOpen ? 'active' : null}>
-                        {CartItens.length >= 1 ? (
-                            <CartList>
-
-                                <button className='close' onClick={toogleCart}>X</button>
-
-                                {CartItens.map((item, index) => (
-                                    <CartItem key={index}>
-                                        <img src={item.image} alt={item.title}/>
-                                        <div>
-                                            <h3>{item.title}</h3>
-                                            <p>{item.ingredientes ? item.ingredientes : ''}</p>
-                                            <p>R${item.price}</p>
-                                            <p>
-                                                <button>+</button>
-                                                <span> 0 </span>
-                                                <button>-</button>
-                                            </p>
-                                            <button onClick={() => RemoveItemCart(item.id)} className='remove'>Remove</button>
-                                        </div>
-                                    </CartItem>
-                                ))}
-
-                                <button onClick={null} className='checkout'>Finalizar Compra</button>
-
-                            </CartList>
-                    ) : (
-                        <div className='empty-cart'>
-                            <button className='close' onClick={toogleCart}>X</button>
-                            <p>Não há itens no carrinho.</p>
-                        </div>
-                    )}
-                </CartBox> 
-                </CartContainer>
+                    <Cart/>
 
                     <MenuMobile className={isMenuOpen ? 'is-open' : ''}>
 

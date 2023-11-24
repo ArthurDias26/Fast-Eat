@@ -32,7 +32,7 @@ export const CartContext = createContext()
 
     const AddItem = (item, cart) => {
 
-        const newCart = cart.filter((itemCart, index) => {
+        const newCart = cart.filter((itemCart) => {
             if (cart.length < 1){
                 return item
             }
@@ -40,6 +40,8 @@ export const CartContext = createContext()
             if(itemCart.id === item.id){
                 return cart
             }
+
+            return []
         })
 
         return [...newCart].length >= 1 ? newCart : [item, ...cart]
