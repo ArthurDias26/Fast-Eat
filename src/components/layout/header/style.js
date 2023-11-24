@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const HeaderBox = styled.header`
     padding: 0 5vw;
     min-height: 50px;
+    width: 100%;
     height: 12vh;
     background-color: ${props => props.theme.redlight};
     color: white;
@@ -11,6 +12,9 @@ export const HeaderBox = styled.header`
     align-items: center;
     box-shadow: 0 0 10px #444;
     font-size: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
 
     @media (max-width: 1024px) {
         font-size: 16px;

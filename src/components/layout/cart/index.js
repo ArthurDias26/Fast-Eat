@@ -44,7 +44,7 @@ export default function Index() {
                                             <p>{item.ingredientes ? item.ingredientes : ''}</p>
                                             <p>R${item.price}</p>
                                             <p>
-                                                <button onClick={AddCart(item)}>+</button>
+                                                <button onClick={() => AddCart(item)}>+</button>
                                                 <span> {item.quantity} </span>
                                                 <button>-</button>
                                             </p>
