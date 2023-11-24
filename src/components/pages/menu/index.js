@@ -48,10 +48,6 @@ export default function Index() {
 
             </FoodTypes>
 
-            {menuType === "Pizza" ? 'tamanho' : null}
-
-            {menuType === "Tudo" ? 'tamanho' : null}
-
             <FoodCards>
                 {Array.isArray(menuItens) ? menuItens.map((item) => (
                     <FoodCard>

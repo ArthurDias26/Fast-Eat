@@ -31,13 +31,20 @@ export const CartContainer = styled.div`
     }
     
     button.checkout{
-        width: 90%;
+        width: 100%;
         color: white;
         display: block;
         margin: auto;
         padding: 8px 0;
-        border-radius: 8px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all .25s;
         background-color: ${(props) => props.theme.redlight};
+    }
+
+    button.checkout:hover{
+        background-color: ${(props) => props.theme.reddark};
     }
 
 `

@@ -15,6 +15,7 @@ export const HeaderBox = styled.header`
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 10000;
 
     @media (max-width: 1024px) {
         font-size: 16px;
