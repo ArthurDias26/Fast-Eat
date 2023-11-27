@@ -14,6 +14,67 @@ export const CheckoutFormContainer = styled.section`
     width: 65%;
 `
 
+export const DeliveyForm = styled.div`
+
+    div, span, input, label, p, button, select{
+        display: none;
+    }
+    &.current{
+     div, span, input, label, p, button, select{
+        display: block;
+    }   
+    }
+
+    div.delivery-info{
+        display: none;
+    }
+
+    div.delivery-info.active{
+        display: block;
+        
+    }
+`
+
+export const ContactForm = styled.div`
+    div, span, input, label, p, button, select{
+        display: none;
+    }
+    &.current{
+     div, span, input, label, p, button, select{
+        display: block;
+    }   
+    }
+`
+
+export const PayForm = styled.div`
+div, span, input, label, p, button, select{
+        display: none;
+    }
+    &.current{
+      span, input, label, p, button, select{
+        display: block;
+    }   
+    }
+    div.pay-form{
+        display: none;
+    }
+
+    div.pay-form.active{
+        display: block;
+    }
+`
+
+export const ReviewForm = styled.div`
+div, span, input, label, p, button, select{
+        display: none;
+    }
+    &.current{
+      span, input, label, p, button, select{
+        display: block;
+    }   
+    }
+`
+
 export const CheckoutCartContainer = styled.section`
     width: 35%;
 `
