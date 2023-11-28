@@ -2,18 +2,31 @@ import React, {useState, useEffect, useContext} from 'react'
 import {CartContainer, CartBox, CartList, CartItem } from "./style"
 import { CartContext } from "../../../contexts/CartContext";
 import { FaShoppingCart } from 'react-icons/fa';
+import { useNavigate } from "react-router-dom";
 
 export default function Index() {
 
     const [isCartOpen, setIsCartOpen] = useState(false)
-
-
-     const {cart, AddCart, RemoveItemCart} = useContext(CartContext)   
-
+     const {cart, AddCart, RemoveItemCart, cartValue} = useContext(CartContext)   
     const [CartItens, setCartItens] = useState([])
+
+    const navigate = useNavigate()
 
     const toogleCart = () =>{
         setIsCartOpen((open) => !open)
+    }
+
+    const CheckNavigate = () => {
+        const date = new Date()
+        const horas = date.getHours()
+
+        if(horas > 14 && horas < 24 && cart.length >=1){
+            navigate("/checkout")
+            setIsCartOpen(false)
+        }
+        else{
+            window.alert('agreadecemos a sua vista, porem estamos fechados no momento!')
+        }
     }
 
     useEffect(()=> {
@@ -46,14 +59,14 @@ export default function Index() {
                                             <p>
                                                 <button onClick={() => AddCart(item)}>+</button>
                                                 <span> {item.quantity} </span>
-                                                <button>-</button>
+                                                <button onClick={() => RemoveItemCart(item.id)}>-</button>
                                             </p>
-                                            <button onClick={() => RemoveItemCart(item.id)} className='remove'>Remove</button>
                                         </div>
                                     </CartItem>
                                 ))}
 
-                                <button onClick={null} className='checkout'>Finalizar Compra</button>
+                                <p>Valor total: R${cartValue.toFixed(2).toString().replace(".", ",")}</p>
+                                <button onClick={CheckNavigate} className='checkout'>Finalizar Compra</button>
 
                             </CartList>
                     ) : (

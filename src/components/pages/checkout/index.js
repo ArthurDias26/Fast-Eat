@@ -9,12 +9,13 @@ import * as yup from 'yup'
 export default function Index() {
 
     const [step, setStep] = useState(1)
-    const [deliveryType, setDeliveryType] = useState('')
+    const [deliveryType, setDeliveryType] = useState('Retirada no local')
     const [payForm, setPayForm] = useState('Dinheiro')
 
-    const {cart, AddCart, RemoveItemCart} = useContext(CartContext)   
+    const {cart, AddCart, RemoveItemCart, cartValue} = useContext(CartContext)   
 
    const [CartItens, setCartItens] = useState([])
+
 
 
    useEffect(()=> {
@@ -26,42 +27,38 @@ export default function Index() {
     .required('A cidade é obrigatório'),
 
     bairro: yup.string()
-    .required('Você deve colocar o bairro para a entrega')
-    .min(5, 'coloque um endereço com no minimo 5 caracteres'),
+    .required('Você deve inserir o bairro para a entrega')
+    .min(5, 'insira um endereço com no minimo 5 caracteres'),
 
     rua: yup.string()
-    .required('Você deve colocar a rua para a entrega')
-    .min(5, 'coloque um endereço com no minimo 5 caracteres'),
+    .required('Você deve inserir a rua para a entrega')
+    .min(5, 'insira um endereço com no minimo 5 caracteres'),
 
     numero: yup.number()
-    .required('Você deve colocar o número da casa para a entrega')
+    .required('Você deve inserir o número da casa para a entrega')
     
 })
 
 const contactSchema = yup.object().shape({
     nome: yup.string()
-    .required('Você deve colocar o seu nome'),
+    .required('Você deve inserir o seu nome'),
 
     telefone: yup.number()
-    .required('Você deve colocar o número de telefone')
-    .min(8, 'coloque um número de telefone valido')
+    .required('Você deve inserir o número de telefone')
+    .min(cartValue, 'insira um número de telefone valido')
 })
 
-const schema = yup.object().shape({
-    nome: yup.string()
-    .required('O nome é obrigatório')
-    .min(3, 'O nome deve ter no mínimo 3 caracteres')
-    .max(35, 'O nome deve ter no máximo 35 caracteres'),
+const paySchema = yup.object().shape({
+    valor: yup.number()
+    .required('insira o valor para o troco')
+    .min(cartValue, 'insira um valor maior que o do pedido')
 
-    message: yup.string()
-    .required('A mensagem é obrigatória')
 })
 
     return(
         <CheckoutContainer>
             <CheckoutFormContainer>
-
-                        <DeliveyForm className={step === 1 ? 'current' : ''}>
+                        <DeliveyForm className={step === 1 ? 'current' : step > 1 ? 'past' : ''}>
                             <Formik
                             initialValues={{
                                 cidade: 'Valentim-Gentil',
@@ -70,9 +67,6 @@ const schema = yup.object().shape({
                                 numero: ''
                             }}
 
-                            onSubmit={(values) => {
-                                window.open(`https://wa.me//5517991266168?text=Olá, sou ${values.name} e ${values.message}`, '_blank')
-                            }}
                             validationSchema={deliverySchema}
                         >
                             {({isValid}) => (
@@ -81,9 +75,17 @@ const schema = yup.object().shape({
                                 <h2>Método de entrega</h2>
                                 <label onClick={() => setDeliveryType('Retirada no local')}>
                                     <Field type="radio" name="picked" value="One" checked/>
-                                    Retirar na loja
+                                    Retirar na loja 
                                 </label>
-                                    <p>Rua Figuerira, Nº333 Valentim Gentil/SP</p>
+
+                                <div className={`delivery-info ${deliveryType === 'Retirada no local' ? 'active' : ''}`}>
+                                    <p>Local de retirada:
+                                    <br/>Rua Figuerira, Nº333 Valentim Gentil/SP
+                                    <br/>Horário de retirada:
+                                    <br/>Após 15 minutos do envio da pedido
+                                    </p>
+                                </div>
+                                    
                                 <label onClick={() => setDeliveryType('Entrega')}>
                                     <Field type="radio" name="picked" value="two" />
                                     Entrega
@@ -111,7 +113,7 @@ const schema = yup.object().shape({
                                 </div>
 
                                 <br/>
-                                <button onClick={()=> setStep(2)} disabled={!isValid} className={isValid ? 'valid' : ''}>Continuar</button>
+                                <button onClick={()=> setStep(2)} disabled={!isValid && deliveryType === "Entrega"} className={isValid ? 'valid' : ''}>Continuar {'>'}</button>
                             </Form>
 
                             )}
@@ -119,16 +121,16 @@ const schema = yup.object().shape({
                         
                         </DeliveyForm>
 
-                        <ContactForm className={step === 2 ? 'current' : ''}>
+                        <ContactForm className={step === 2 ? 'current' : step > 2 ? 'past' : ''}>
 
                             <Formik
                             initialValues={{
-                                nome: undefined,
+                                nome: '',
                                 telefone: '',
                             }}
 
-                            onSubmit={(values) => {
-                                window.open(`https://wa.me//5517991266168?text=Olá, sou ${values.name} e ${values.message}`, '_blank')
+                            onSubmit={() => {
+                                setStep(3)
                             }}
                             validationSchema={contactSchema}>
                             {({isValid}) => (
@@ -137,14 +139,15 @@ const schema = yup.object().shape({
                                 <h2>Informações de contato</h2>
 
                                 <span htmlFor='nome'>Nome:</span>
-                                <Field type='text' id='nome' name='nome'/>
+                                <Field type='text' id='nome' name='nome' autocomplete="off"/>
                                 <div className='error_message'><ErrorMessage name='nome'/></div>
 
                                 <span htmlFor='telefone'>Telefone de conatato:</span>
                                 <Field type='number' id='telefone' name='telefone'/>
                                 <div className='error_message'><ErrorMessage name='telefone'/></div>
 
-                                <button onClick={()=> setStep(3)} disabled={!isValid} className={isValid ? 'valid' : ''}>Continuar</button>
+                                <button onClick={()=> setStep(1)} type='button'>{'<'} Voltar</button>
+                                <button type='submit' disabled={!isValid} className={isValid ? 'valid' : ''}>Continuar</button>
 
                             </Form>
 
@@ -154,18 +157,13 @@ const schema = yup.object().shape({
 
                         </ContactForm>
 
-                        <PayForm className={step === 3 ? 'current' : ''}>
+                        <PayForm className={step === 3 ? 'current' : step > 3 ? 'past' : ''}>
                             <Formik
                             initialValues={{
-                                name: '',
-                                number: '',
-                                message: ''
+                                valor: 0,
                             }}
 
-                            onSubmit={(values) => {
-                                window.open(`https://wa.me//5517991266168?text=Olá, sou ${values.name} e ${values.message}`, '_blank')
-                            }}
-                            validationSchema={schema}>
+                            validationSchema={paySchema}>
                             {({isValid}) => (
 
                             <Form>
@@ -191,12 +189,13 @@ const schema = yup.object().shape({
                                     </label>
 
                                     <div className={`pay-form ${payForm === 'Dinheiro' ? 'active' : ''}`}>
-                                        <span htmlFor='name'>Valor:</span>
-                                        <Field type='text' id='name' name='name' placeholder='Troco para qunato?'/>
-                                        <div className='error_message'><ErrorMessage name='name'/></div>
+                                        <span htmlFor='valor'>Valor:</span>
+                                        <Field type='number' id='valor' name='valor' placeholder='Troco para qunato?'/>
+                                        <div className='error_message'><ErrorMessage name='valor'/></div>
                                     </div>
-
-                                <button onClick={()=> setStep(4)} disabled={!isValid} className={isValid ? 'valid' : ''}>Continuar</button>
+                                
+                                <button onClick={()=> setStep(2)} type='button'>{'<'} Voltar</button>
+                                <button disabled={!isValid && payForm === 'Dinheiro'} onClick={() => setStep(4)} className={isValid ? 'valid' : ''}>Continuar</button>
 
                             </Form>
 
@@ -207,24 +206,18 @@ const schema = yup.object().shape({
 
                         <ReviewForm className={step === 4 ? 'current' : ''}>
                             <Formik
-                            initialValues={{
-                                name: '',
-                                number: '',
-                                message: ''
+                            onSubmit={() => {
+                                window.open(`https://wa.me//5517991266168?text=Olá, sou teste e nada`, '_blank')
                             }}
-
-                            onSubmit={(values) => {
-                                window.open(`https://wa.me//5517991266168?text=Olá, sou ${values.name} e ${values.message}`, '_blank')
-                            }}
-                            validationSchema={schema}
                         >
-                            {({isValid}) => (
+                            {() => (
 
                             <Form>
                                 <h2>Revisar e finalizar pedido</h2>
                                 <p>Revise os Dados acima e os valores para finalizar sua compra.</p>
 
-                                <button type='submit' disabled={!isValid} className={isValid ? 'valid' : ''}>Enviar</button>
+                                <button onClick={()=> setStep(3)} type='button'>{'<'} Voltar</button>
+                                <button type='submit'>Enviar</button>
                             </Form>
 
                             )}
@@ -248,14 +241,13 @@ const schema = yup.object().shape({
                             <p>
                                 <button onClick={() => AddCart(item)}>+</button>
                                 <span> {item.quantity} </span>
-                                <button>-</button>
+                                <button onClick={() => RemoveItemCart(item.id)}>-</button>
                             </p>
-                            <button onClick={() => RemoveItemCart(item.id)} className='remove'>Remove</button>
                         </div>
                     </CartItem>
                 ))}
 
-
+                <p>Valor total: R${cartValue.toFixed(2).toString().replace(".", ",")}</p>
             </CartList>
             </CheckoutCartContainer>
         </CheckoutContainer>

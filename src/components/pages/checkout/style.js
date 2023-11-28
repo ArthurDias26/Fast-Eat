@@ -3,15 +3,30 @@ import styled from "styled-components"
 export const CheckoutContainer = styled.div`
     background-color: white;
     width: 80%;
+    min-height: 68vh;
     border-radius: 12px;
     padding: 8px;
     margin: auto;
+    display: block;
+    margin-top: 22vh;
     display: flex;
-    margin-top: 35px;
 `
 
 export const CheckoutFormContainer = styled.section`
     width: 65%;
+
+    h2{
+        margin-bottom: 15px;
+    }
+
+    input[type=text], input[type=number]{
+        width: 90%;
+        margin: auto;
+        border: .5px solid black;
+        padding: 4px;
+        font-size: 16px;
+    }
+    
 `
 
 export const DeliveyForm = styled.div`
@@ -20,9 +35,30 @@ export const DeliveyForm = styled.div`
         display: none;
     }
     &.current{
-     div, span, input, label, p, button, select{
+     div, span, label, p, select{
         display: block;
-    }   
+    }  
+    
+    input, button{
+        display: inline-block;
+    }
+    }
+
+    &.past{
+     div, span, label, p, select{
+        display: block;
+        color: gray;
+        pointer-events: none;
+    }  
+    
+    input{
+        display: inline-block;
+        pointer-events: none
+    }
+ 
+    button{
+        display: none;
+    }
     }
 
     div.delivery-info{
@@ -40,9 +76,31 @@ export const ContactForm = styled.div`
         display: none;
     }
     &.current{
-     div, span, input, label, p, button, select{
+     div, span, input, label, p, select{
         display: block;
     }   
+    button{
+        display: inline-block;
+    }
+    }
+
+    &.past{
+     div, span, label, p, select{
+        display: block;
+        color: gray;
+        pointer-events: none;
+    }  
+    
+    input{
+        display: inline-block;
+        background-color: white;
+        color: gray !important;
+        pointer-events: none
+    }
+ 
+    button{
+        display: none;
+    }
     }
 `
 
@@ -51,10 +109,33 @@ div, span, input, label, p, button, select{
         display: none;
     }
     &.current{
-      span, input, label, p, button, select{
+      span, label, p, button, select{
         display: block;
     }   
+    input, button{
+        display: inline-block;
     }
+    }
+
+    &.past{
+     div, span, label, p, select{
+        display: block;
+        color: gray;
+        pointer-events: none;
+    }  
+    
+    input{
+        display: inline-block;
+        background-color: white;
+        color: gray !important;
+        pointer-events: none
+    }
+ 
+    button{
+        display: none;
+    }
+    }
+    
     div.pay-form{
         display: none;
     }
@@ -69,9 +150,12 @@ div, span, input, label, p, button, select{
         display: none;
     }
     &.current{
-      span, input, label, p, button, select{
+      span, input, label, p, select{
         display: block;
     }   
+    button{
+        display: inline-block;
+    }
     }
 `
 
@@ -80,6 +164,7 @@ export const CheckoutCartContainer = styled.section`
 `
 
 export const CartList = styled.div`
+    padding: 12px;
     overflow: auto;
     
 `
@@ -87,6 +172,7 @@ export const CartList = styled.div`
 export const CartItem = styled.div`
     display: flex;
     margin-bottom: 30px;
+    font-size: 18px;
 
     img{
         max-width: 40%;
@@ -108,18 +194,15 @@ export const CartItem = styled.div`
         width: 100%;
     }
 
-    button.remove{
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        padding: 6px 10px;
-        border-radius: 8px;
-        background-color: ${(props) => props.theme.redlight};
-        color: white;
-        font-size: 24px;
+    button{
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+        transform: all .25s;
+        cursor: pointer;
 
         &:hover{
-            background-color: ${(props) => props.theme.reddark};
+            color: ${(props) => props.theme.reddark};
         }
     }
 

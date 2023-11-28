@@ -7,6 +7,8 @@ export const CartContext = createContext()
 
 
     const [cart, setCart] = useState([])
+    const [cartValue, setCartValue] = useState(0)
+
 
     useEffect(() => {
 
@@ -15,8 +17,15 @@ export const CartContext = createContext()
         if(cartPersistence){
             setCart(JSON.parse(cartPersistence))
         }
-
     }, [])
+
+    useEffect(() => {
+        var value = 0
+        cart.forEach((item) => {
+            value = value + (item.price * item.quantity)
+           })
+           setCartValue(value)
+    }, [cart])
 
     const CheckCartItems = (id, cart) => {
         const checkedCart = cart.filter((itemCart) => {
@@ -72,7 +81,7 @@ export const CartContext = createContext()
     }
 
         return(
-            <CartContext.Provider value={{cart, AddCart, RemoveItemCart, ClearCart}}>
+            <CartContext.Provider value={{cart, AddCart, RemoveItemCart, ClearCart, cartValue}}>
                 {children}
             </CartContext.Provider>
         )

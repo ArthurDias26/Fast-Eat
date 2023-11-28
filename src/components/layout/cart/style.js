@@ -60,7 +60,8 @@ export const CartBox = styled.div`
     width: 30vw;
     background-color: white;
     color: black;
-    transition: all .45s;
+    transition: all .35s;
+    box-shadow: inset.5px .5px 3px #bbb;
 
     &.active{
         top: 0;
