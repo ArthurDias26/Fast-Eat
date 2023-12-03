@@ -1,6 +1,7 @@
 import {CheckoutContainer, CheckoutFormContainer, CheckoutCartContainer, CartList, CartItem, DeliveyForm, ContactForm, PayForm, ReviewForm } from './style'
 
 import React, {useState, useEffect, useContext} from 'react'
+import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../../contexts/CartContext";
 
 import { Formik, Form, Field, ErrorMessage } from 'formik'
@@ -16,11 +17,21 @@ export default function Index() {
 
    const [CartItens, setCartItens] = useState([])
 
-
+   const navigate = useNavigate()
 
    useEffect(()=> {
        setCartItens(cart)
    }, [cart])
+
+   useEffect(()=> {
+    const date = new Date()
+        const horas = date.getHours()
+
+        if(horas < 14 || cart.length === 0){
+            window.alert('agreadecemos a sua vista, porem estamos fechados no momento!')
+            navigate("/")
+        }
+})
 
    const deliverySchema = yup.object().shape({
     cidade: yup.string()
@@ -72,24 +83,29 @@ const paySchema = yup.object().shape({
                             {({isValid}) => (
 
                             <Form>
-                                <h2>Método de entrega</h2>
+                                <h2>1. Método de entrega</h2>
+
                                 <label onClick={() => setDeliveryType('Retirada no local')}>
                                     <Field type="radio" name="picked" value="One" checked/>
                                     Retirar na loja 
                                 </label>
 
-                                <div className={`delivery-info ${deliveryType === 'Retirada no local' ? 'active' : ''}`}>
-                                    <p>Local de retirada:
-                                    <br/>Rua Figuerira, Nº333 Valentim Gentil/SP
-                                    <br/>Horário de retirada:
-                                    <br/>Após 15 minutos do envio da pedido
-                                    </p>
-                                </div>
-                                    
                                 <label onClick={() => setDeliveryType('Entrega')}>
                                     <Field type="radio" name="picked" value="two" />
                                     Entrega
                                 </label>
+
+                                <div className={`delivery-info ${deliveryType === 'Retirada no local' ? 'active' : ''}`}>
+                                    <p>
+                                        Local de retirada:
+                                        <br/>Rua Figuerira, Nº333 Valentim Gentil/SP
+                                    </p>
+                                    <p>
+                                        Horário de retirada:
+                                        <br/>Após 15 minutos do envio da pedido
+                                    </p>
+                                </div>
+            
 
                                 <div className={`delivery-info ${deliveryType === 'Entrega' ? 'active' : ''}`}>
                                     <span htmlFor='cidade'>Cidade:</span>
@@ -100,19 +116,18 @@ const paySchema = yup.object().shape({
                                     </Field>
 
                                     <span htmlFor='bairro'>Bairro:</span>
-                                    <Field type='text' id='bairro' name='bairro'/>
+                                    <Field type='text' id='bairro' name='bairro' autocomplete='off'/>
                                     <div className='error_message'><ErrorMessage name='bairro'/></div>
 
                                     <span htmlFor='rua'>Rua:</span>
-                                    <Field type='text' id='rua' name='rua'/>
+                                    <Field type='text' id='rua' name='rua' autocomplete='off'/>
                                     <div className='error_message'><ErrorMessage name='rua'/></div>
 
                                     <span htmlFor='numero'>Número da casa:</span>
-                                    <Field type='number' id='numero' name='numero'/>
+                                    <Field type='number' id='numero' name='numero' autocomplete='off'/>
                                     <div className='error_message'><ErrorMessage name='numero'/></div>
                                 </div>
 
-                                <br/>
                                 <button onClick={()=> setStep(2)} disabled={!isValid && deliveryType === "Entrega"} className={isValid ? 'valid' : ''}>Continuar {'>'}</button>
                             </Form>
 
@@ -136,7 +151,7 @@ const paySchema = yup.object().shape({
                             {({isValid}) => (
 
                             <Form>
-                                <h2>Informações de contato</h2>
+                                <h2>2. Informações de contato</h2>
 
                                 <span htmlFor='nome'>Nome:</span>
                                 <Field type='text' id='nome' name='nome' autocomplete="off"/>
@@ -147,7 +162,7 @@ const paySchema = yup.object().shape({
                                 <div className='error_message'><ErrorMessage name='telefone'/></div>
 
                                 <button onClick={()=> setStep(1)} type='button'>{'<'} Voltar</button>
-                                <button type='submit' disabled={!isValid} className={isValid ? 'valid' : ''}>Continuar</button>
+                                <button type='submit' disabled={!isValid} className={isValid ? 'valid' : ''}>Continuar {'>'}</button>
 
                             </Form>
 
@@ -167,26 +182,28 @@ const paySchema = yup.object().shape({
                             {({isValid}) => (
 
                             <Form>
-                                <h2>Forma de Pagamento</h2>
+                                <h2>3. Forma de Pagamento</h2>
                                 <p>O pagamento será feito na entrega.</p>
 
-                                    <label onClick={() => setPayForm('Dinheiro')}>
-                                        <Field type="radio" name="picked" value="Dinheiro" checked/>
-                                        Dinheiro
-                                    </label>
-                                    <label onClick={() => setPayForm('Crédito')}>
-                                        <Field type="radio" name="picked" value="Crédito" />
-                                        Crédito
-                                    </label>
+                                    <div  className='pay-options'>
+                                        <label onClick={() => setPayForm('Dinheiro')}>
+                                            <Field type="radio" name="picked" value="Dinheiro" checked/>
+                                            Dinheiro
+                                        </label>
+                                        <label onClick={() => setPayForm('Crédito')}>
+                                            <Field type="radio" name="picked" value="Crédito" />
+                                            Crédito
+                                        </label>
 
-                                    <label onClick={() => setPayForm('Débito')}>
-                                        <Field type="radio" name="picked" value="Débito"/>
-                                        Débito
-                                    </label>
-                                    <label onClick={() => setPayForm('Pix')}>
-                                        <Field type="radio" name="picked" value="Pix" />
-                                        Pix
-                                    </label>
+                                        <label onClick={() => setPayForm('Débito')}>
+                                            <Field type="radio" name="picked" value="Débito"/>
+                                            Débito
+                                        </label>
+                                        <label onClick={() => setPayForm('Pix')}>
+                                            <Field type="radio" name="picked" value="Pix" />
+                                            Pix
+                                        </label>
+                                    </div>
 
                                     <div className={`pay-form ${payForm === 'Dinheiro' ? 'active' : ''}`}>
                                         <span htmlFor='valor'>Valor:</span>
@@ -195,7 +212,7 @@ const paySchema = yup.object().shape({
                                     </div>
                                 
                                 <button onClick={()=> setStep(2)} type='button'>{'<'} Voltar</button>
-                                <button disabled={!isValid && payForm === 'Dinheiro'} onClick={() => setStep(4)} className={isValid ? 'valid' : ''}>Continuar</button>
+                                <button disabled={!isValid && payForm === 'Dinheiro'} onClick={() => setStep(4)} className={isValid ? 'valid' : ''}>Continuar {'>'}</button>
 
                             </Form>
 
@@ -213,7 +230,7 @@ const paySchema = yup.object().shape({
                             {() => (
 
                             <Form>
-                                <h2>Revisar e finalizar pedido</h2>
+                                <h2>4. Revisar e finalizar pedido</h2>
                                 <p>Revise os Dados acima e os valores para finalizar sua compra.</p>
 
                                 <button onClick={()=> setStep(3)} type='button'>{'<'} Voltar</button>
