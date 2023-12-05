@@ -97,6 +97,7 @@ export const CartBox = styled.div`
 
 export const CartList = styled.div`
     padding: 12px;
+    padding-top: 35px;
     overflow: auto;
 
     
@@ -107,7 +108,7 @@ export const CartItem = styled.div`
     margin-bottom: 30px;
 
     img{
-        max-width: 40%;
+        width: 50%;
         border-radius: 8px;
     }
 

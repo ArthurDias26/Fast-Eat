@@ -20,7 +20,7 @@ export default function Index() {
         const date = new Date()
         const horas = date.getHours()
 
-        if(horas > 14 && horas < 24 && cart.length >=1){
+        if(horas > 0 && horas < 24 && cart.length >=1){
             navigate("/checkout")
             setIsCartOpen(false)
         }

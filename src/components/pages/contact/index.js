@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ContactContainer, ContactForm, ContactNotes } from './style'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as yup from 'yup'
@@ -7,7 +7,7 @@ import {FaPhoneAlt, FaFacebook, FaInstagram, FaWhatsapp} from 'react-icons/fa'
 import {MdEmail} from 'react-icons/md'
 import {RiMapPin2Fill} from 'react-icons/ri'
 
-export default function index() {
+export default function Index() {
 
     const schema = yup.object().shape({
         name: yup.string()
@@ -18,6 +18,10 @@ export default function index() {
         message: yup.string()
         .required('A mensagem é obrigatória')
     })
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
   return (
     <ContactContainer>

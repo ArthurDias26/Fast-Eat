@@ -1,7 +1,12 @@
+import { useEffect } from "react"
 import { NotFound } from "./style"
 
-export default function index() {
+export default function Index() {
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
+    
     return(
         <NotFound>
             <div>

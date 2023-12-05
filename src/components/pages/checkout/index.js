@@ -27,10 +27,12 @@ export default function Index() {
     const date = new Date()
         const horas = date.getHours()
 
-        if(horas < 14 || cart.length === 0){
+        if(horas < 0 || cart.length === 0){
             window.alert('agreadecemos a sua vista, porem estamos fechados no momento!')
             navigate("/")
         }
+
+        window.scrollTo(0, 0);
 })
 
    const deliverySchema = yup.object().shape({

@@ -29,6 +29,10 @@ export default function Index() {
         }
     }, [menuType])
 
+    useEffect(() =>{
+        window.scrollTo(0, 0);
+    }, [])
+
     return(
         <FoodMenu>
             <MenuTitle>

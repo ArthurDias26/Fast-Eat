@@ -1,6 +1,8 @@
 import { Home, Outdoor, Cards, Card, ButtonArea, MenuOptionsContainer, MenuOptions, Option, Map } from "./style"
 import LinkButton from '../../layout/linkButton'
 
+import { useEffect } from "react"
+
 import smartphoneIcon from '../../../assets/images/smartphone.png'
 import menuIcon from '../../../assets/images/cardapio.png'
 import deliveryIcon from '../../../assets/images/entrega.png'
@@ -11,7 +13,11 @@ import bebidas from '../../../assets/images/bebidas.jpg'
 
 
 
-export default function index() {
+export default function Index() {
+
+    useEffect(() =>{
+        window.scrollTo(0, 0);
+    }, [])
 
     return(
         <Home>
