@@ -20,6 +20,10 @@ export const CheckoutContainer = styled.div`
     width: 80%;
     flex-direction: column;
    }
+
+   @media (max-width: 768px) {
+    margin-top: 18vh;
+   }
 `
 
 export const CheckoutFormContainer = styled.section`
@@ -138,6 +142,8 @@ export const DeliveyForm = styled.div`
         padding: 4.5px 8px;
         border-radius: 4px;
     }
+
+    margin-bottom: 45px;
 `
 
 export const ContactForm = styled.div`
@@ -172,6 +178,8 @@ export const ContactForm = styled.div`
         display: none;
     }
     }
+    
+    margin-bottom: 45px;
 `
 
 export const PayForm = styled.div`
@@ -227,6 +235,8 @@ div, span, input, label, p, button, select{
         display: block;
     }
 
+    margin-bottom: 45px;
+
 `
 
 export const ReviewForm = styled.div`
@@ -242,6 +252,8 @@ div, span, input, label, p, button, select{
         display: inline-block;
     }
     }
+
+    margin-bottom: 45px;
 `
 
 export const CheckoutCartContainer = styled.section`

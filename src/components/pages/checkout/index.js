@@ -27,7 +27,7 @@ export default function Index() {
     const date = new Date()
         const horas = date.getHours()
 
-        if(horas < 0 || cart.length === 0){
+        if(horas > 24 || cart.length === 0){
             window.alert('agreadecemos a sua vista, porem estamos fechados no momento!')
             navigate("/")
         }
@@ -131,6 +131,7 @@ const paySchema = yup.object().shape({
                                 </div>
 
                                 <button onClick={()=> setStep(2)} disabled={!isValid && deliveryType === "Entrega"} className={isValid ? 'valid' : ''}>Continuar {'>'}</button>
+                                <hr/>
                             </Form>
 
                             )}
@@ -165,6 +166,7 @@ const paySchema = yup.object().shape({
 
                                 <button onClick={()=> setStep(1)} type='button'>{'<'} Voltar</button>
                                 <button type='submit' disabled={!isValid} className={isValid ? 'valid' : ''}>Continuar {'>'}</button>
+                                <hr/>
 
                             </Form>
 
@@ -215,6 +217,7 @@ const paySchema = yup.object().shape({
                                 
                                 <button onClick={()=> setStep(2)} type='button'>{'<'} Voltar</button>
                                 <button disabled={!isValid && payForm === 'Dinheiro'} onClick={() => setStep(4)} className={isValid ? 'valid' : ''}>Continuar {'>'}</button>
+                                <hr/>
 
                             </Form>
 
@@ -237,6 +240,7 @@ const paySchema = yup.object().shape({
 
                                 <button onClick={()=> setStep(3)} type='button'>{'<'} Voltar</button>
                                 <button type='submit'>Enviar</button>
+                                
                             </Form>
 
                             )}

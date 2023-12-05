@@ -19,24 +19,32 @@ export const HeaderBox = styled.header`
 
     @media (max-width: 1024px) {
         font-size: 16px;
-
-        div img{
-            max-width: 8vh;
-        }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
         font-size: 14px;
+        height: 8vh;
     }
 
 `
 
 export const IconBox = styled.div`
         max-width: 10vh;
-        min-width: 40px;
 
     img{
         max-width: 100%;
+    }
+
+    @media (max-width: 1024px) {
+        img{
+            max-width: 8vh;
+        }
+    }
+
+    @media (max-width: 768px) {
+        img{
+            max-width: 6vh;
+        }
     }
 `
 

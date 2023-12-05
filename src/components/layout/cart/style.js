@@ -28,19 +28,35 @@ export const CartContainer = styled.div`
         right: 12px;
         top: 12px;
         z-index: 10;
+
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
     }
     
     button.checkout{
-        width: 100%;
+        width: calc(30vw - 16px);
         color: white;
         display: block;
         margin: auto;
         padding: 8px 0;
-        position: absolute;
+        position: fixed;
+        font-size: 26px;
         bottom: 0;
-        left: 0;
         transition: all .25s;
         background-color: ${(props) => props.theme.redlight};
+
+        @media (max-width: 1440px) {
+            width: calc(40vw - 16px);
+        }
+
+        @media (max-width: 980px) {
+            width: calc(50vw - 16px);
+        }
+
+        @media (max-width: 768px) {
+            width: calc(65vw - 16px);
+        }
     }
 
     button.checkout:hover{
@@ -53,7 +69,7 @@ export const CartBox = styled.div`
 
     position: fixed;
     top: 0;
-    right: -65vw;
+    right: -30vw;
     height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -63,9 +79,18 @@ export const CartBox = styled.div`
     transition: all .35s;
     box-shadow: inset.5px .5px 3px #bbb;
 
+    button.checkout{
+        right: -65vw;
+    }
+
     &.active{
         top: 0;
         right: 0;
+
+        button.checkout{
+        right: 16px;
+        }
+
     }
 
     div.empty-cart{
@@ -79,14 +104,30 @@ export const CartBox = styled.div`
 
     @media (max-width: 1440px) {
         width: 40vw;
+        right: -40vw;
+
+        button.checkout{
+        right: -40vw;
+        }
+
     }
 
     @media (max-width: 980px) {
         width: 50vw;
+        right: -50vw;
+
+        button.checkout{
+        right: -50vw;
+        }
     }
 
     @media (max-width: 768px) {
         width: 65vw;
+        right: -65vw;
+
+        button.checkout{
+        right: -65vw;
+        }
 
         div.empty-cart{
         font-size: 22px;
@@ -96,8 +137,7 @@ export const CartBox = styled.div`
 `
 
 export const CartList = styled.div`
-    padding: 12px;
-    padding-top: 35px;
+    padding: 36px 1px 54px 12px;
     overflow: auto;
 
     
@@ -108,7 +148,7 @@ export const CartItem = styled.div`
     margin-bottom: 30px;
 
     img{
-        width: 50%;
+        width: 45%;
         border-radius: 8px;
     }
 
