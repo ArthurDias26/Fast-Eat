@@ -16,6 +16,7 @@ export const Outdoor = styled.section`
    font-size: 30px;
    padding: 12vh 0 0 3vw;
    color: ${props => props.theme.orange};
+   box-shadow: 0 0 8px 20px ${props => props.theme.yelow};
 
    h2{
       font-size: 2.5vw;

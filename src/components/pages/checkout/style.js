@@ -258,6 +258,8 @@ div, span, input, label, p, button, select{
 
 export const CheckoutCartContainer = styled.section`
     width: 35%;
+    max-height: 80vh;
+    overflow-y: scroll;
 
     @media (max-width: 960px) {
     width: 60%;

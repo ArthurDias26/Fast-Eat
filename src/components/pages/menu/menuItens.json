@@ -35,139 +35,105 @@
             "quantity": 0
         },
         {
-            "title": "4 QUEIJOS",
+            "title": "Margherita",
             "id": 5,
-            "ingredientes": "Queijo, requeijão, oregano e parmesão ralado.",
+            "ingredientes": "Queijo, tomate, oregano e manjericão.",
             "price": 39.99,
-            "image": "https://i.imgur.com/rbVQjaG.jpg",
+            "image": "https://i.imgur.com/fIrBfTy.jpeg[/img]",
             "quantity": 0
         },
 
         {
-            "title": "CALABRESA",
+            "title": "Frango com Requeijão Especial",
             "id": 6,
-            "ingredientes": "Queijo, calabresa e cebola, oregano.",
+            "ingredientes": "Frango desfiado, cebola, oregano e requeijão",
             "price": 39.99,
-            "image": "https://imgur.com/1QNXIAm.jpg",
+            "image": "https://i.imgur.com/0HMP3oY.jpeg",
             "quantity": 0
         },
 
         {
-            "title": "BACON E MILHO",
+            "title": "Cheddar",
             "id": 7,
-            "ingredientes": "Queijo, bacon, oregano e milho.",
+            "ingredientes": "Queijo, molho sabor queijo cheddar e orégano.",
             "price": 39.99,
-            "image": "https://imgur.com/Dt5ETmq.jpg",
+            "image": "https://i.imgur.com/9mRJPJt.png",
             "quantity": 0
         },
         {
-            "title": "PEPPERONI",
+            "title": "Bauru",
             "id": 8,
-            "ingredientes": "Queijo, oregano e pepperoni.",
+            "ingredientes": "Queijo, presunto, requeijão, oregano e tomate.",
             "price": 39.99,
-            "image": "https://imgur.com/NsHgzyF.jpg",
+            "image": "https://i.imgur.com/sFU5Z3P.jpeg",
             "quantity": 0
         },
         {
-            "title": "4 QUEIJOS",
+            "title": "Frango Caipira",
             "id": 9,
-            "ingredientes": "Queijo, requeijão, oregano e parmesão ralado.",
+            "ingredientes": "Queijo, frango desfiado, milho, catupiry e orégano.",
             "price": 39.99,
-            "image": "https://i.imgur.com/rbVQjaG.jpg",
+            "image": "https://i.imgur.com/S5gZvyZ.png",
             "quantity": 0
         },
 
         {
-            "title": "CALABRESA",
+            "title": "Napolitana",
             "id": 10,
-            "ingredientes": "Queijo, calabresa e cebola, oregano.",
+            "ingredientes": "Queijo, tomate, oregano e parmesão ralado.",
             "price": 39.99,
-            "image": "https://imgur.com/1QNXIAm.jpg",
+            "image": "https://i.imgur.com/V9WA6qb.jpeg",
             "quantity": 0
         },
 
         {
-            "title": "BACON E MILHO",
+            "title": "Presunto",
             "id": 11,
-            "ingredientes": "Queijo, bacon, oregano e milho.",
+            "ingredientes": "Queijo, oregano e presunt.",
             "price": 39.99,
-            "image": "https://imgur.com/Dt5ETmq.jpg",
+            "image": "https://i.imgur.com/VXC0IKh.jpeg",
             "quantity": 0
         },
         {
-            "title": "PEPPERONI",
+            "title": "Pizza Pão de Alho",
             "id": 12,
-            "ingredientes": "Queijo, oregano e pepperoni.",
+            "ingredientes": "Queijo, pão ciabatta, pasta de alho, parmesão ralado e orégano.",
             "price": 39.99,
-            "image": "https://imgur.com/NsHgzyF.jpg",
-            "quantity": 0
-        },
-        {
-            "title": "4 QUEIJOS",
-            "id": 13,
-            "ingredientes": "Queijo, requeijão, oregano e parmesão ralado.",
-            "price": 39.99,
-            "image": "https://i.imgur.com/rbVQjaG.jpg",
-            "quantity": 0
-        },
-
-        {
-            "title": "CALABRESA",
-            "id": 14,
-            "ingredientes": "Queijo, calabresa e cebola, oregano.",
-            "price": 39.99,
-            "image": "https://imgur.com/1QNXIAm.jpg",
-            "quantity": 0
-        },
-
-        {
-            "title": "BACON E MILHO",
-            "id": 15,
-            "ingredientes": "Queijo, bacon, oregano e milho.",
-            "price": 39.99,
-            "image": "https://imgur.com/Dt5ETmq.jpg",
-            "quantity": 0
-        },
-        {
-            "title": "PEPPERONI",
-            "id": 16,
-            "ingredientes": "Queijo, oregano e pepperoni.",
-            "price": 39.99,
-            "image": "https://imgur.com/NsHgzyF.jpg",
+            "image": "https://i.imgur.com/UeThSaq.jpeg",
             "quantity": 0
         }
     ],
-    "Esfirra": [
+    "Lanche": [
         {
-            "title": "Esfirra carne",
+            "title": "Frango com Quatro Queijos",
             "id": 17,
-            "ingredientes": "Carne temperada com limão, tomate, tahine, cebola e tempero especial.",
+            "ingredientes": "Queijo, Cream-cheese, frango grelhado, gorgonzola, parmesão e azeite.",
             "price": 8.99,
-            "image": "https://imgur.com/2CNe1eU.jpg",
+            "image": "https://i.imgur.com/fdYljU5.jpeg",
             "quantity": 0
         },
         {
-            "title": "Esfirra carne",
+            "title": "Carne Seca",
             "id": 18,
-            "ingredientes": "Carne temperada com limão, tomate, tahine, cebola e tempero especial.",
+            "ingredientes": "Cream cheese, carne seca, cebola, queijo e azeite.",
             "price": 8.99,
-            "image": "https://imgur.com/2CNe1eU.jpg",
+            "image": "https://i.imgur.com/b1U2OXK.png",
             "quantity": 0
         },
         {
-            "title": "Esfirra carne",
+            "title": "Caprese",
             "id": 19,
-            "ingredientes": "Carne temperada com limão, tomate, tahine, cebola e tempero especial.",
+            "ingredientes": "Queijo de búfala e vaca, cebola, tomate, azeitona preta, manjericão e azeite.",
             "price": 8.99,
-            "image": "https://imgur.com/2CNe1eU.jpg",
+            "image": "https://i.imgur.com/l3JLvU1.jpeg",
             "quantity": 0
         },
         {
-            "title": "Esfirra carne",
+            "title": "Frango, Cheddar & Bacon",
             "id": 20,
-            "ingredientes": "Carne temperada com limão, tomate, tahine, cebola e tempero especial.",
+            "ingredientes": "Queijo, molho sabor queijo cheddar, frango grelhado, bacon e azeite.",
             "price": 8.99,
-            "image": "https://imgur.com/2CNe1eU.jpg",
+            "image": "https://i.imgur.com/tAxMO6h.png",
             "quantity": 0
         }
     ],
@@ -182,7 +148,7 @@
         {
             "title": "Coca-Cola 220Ml Original Lata",
             "id": 22,
-            "price": 10.99,
+            "price": 2.99,
             "image": "https://i.imgur.com/NrBTALG.jpg",
             "quantity": 0
         },
@@ -196,7 +162,7 @@
         {
             "title": "Coca-Cola 350Ml Sem Açúcar Lata",
             "id": 24,
-            "price": 10.99,
+            "price": 4.99,
             "image": "https://i.imgur.com/DrP9g7f.png",
             "quantity": 0
         }

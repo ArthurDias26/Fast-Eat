@@ -28,41 +28,38 @@ export const CartContext = createContext()
     }, [cart])
 
     const CheckCartItems = (id, cart) => {
-        const checkedCart = cart.filter((itemCart) => {
+        let indexCart = null
+        cart.forEach((itemCart, index) => {
             if(itemCart.id === id){
-                return null
+                indexCart = index
             }
-            return itemCart
+            return null
         })
-
-        return checkedCart
-
-    }
-
-    const AddItem = (item, cart) => {
-
-        const newCart = cart.filter((itemCart, index) => {
-            if (cart.length < 1){
-                return item
-            }
-
-            if(itemCart.id === item.id){
-                return cart
-            }
-
-            return []
-        })
-
-        return [...newCart].length >= 1 ? newCart : [item, ...cart]
+        return indexCart
 
     }
 
     const AddCart = (item) => {
         if (item) {   
-            item.quantity++
-            const newCart = AddItem(item, cart)
-            setCart(newCart)
-            localStorage.setItem('cart', JSON.stringify(newCart))
+            const index = CheckCartItems(item.id, cart)
+            if(cart.length === 0){
+                item.quantity = 1
+                const newCart = [item]
+                setCart(newCart)
+                localStorage.setItem('cart', JSON.stringify(newCart))
+            }
+            else if(index != null){
+                cart[index].quantity = cart[index].quantity + 1
+                const newCart = [...cart]
+                setCart(newCart)
+                localStorage.setItem('cart', JSON.stringify(newCart))
+            }else{
+                item.quantity = 1
+                const newCart = [item, ...cart]
+                setCart(newCart)
+                localStorage.setItem('cart', JSON.stringify(newCart))
+            }
+         
 
         }
 
@@ -70,8 +67,19 @@ export const CartContext = createContext()
 
     const RemoveItemCart = (itemId) => {
         if (itemId) {
-            const newCart = CheckCartItems(itemId, [...cart])     
-            localStorage.setItem('cart', JSON.stringify(newCart))
+            const index = CheckCartItems(itemId, [...cart])  
+            if(cart[index].quantity >= 2){
+                cart[index].quantity = cart[index].quantity - 1
+                const newCart = [...cart]
+                setCart(newCart)
+                localStorage.setItem('cart', JSON.stringify(newCart))
+            }
+            else{
+                const newCart = [...cart]
+                newCart.splice(index, 1)
+                setCart(newCart)
+                localStorage.setItem('cart', JSON.stringify(newCart))
+            }
         }
 
     }

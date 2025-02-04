@@ -146,9 +146,11 @@ export const CartList = styled.div`
 export const CartItem = styled.div`
     display: flex;
     margin-bottom: 30px;
+    font-size: 18px;
 
     img{
-        width: 45%;
+        width: 30%;
+        height: max-content;
         border-radius: 8px;
     }
 
@@ -167,25 +169,19 @@ export const CartItem = styled.div`
         width: 100%;
     }
 
-    button.remove{
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        padding: 6px 10px;
-        border-radius: 8px;
-        background-color: ${(props) => props.theme.redlight};
-        color: white;
-        font-size: 24px;
-
-        &:hover{
-            background-color: ${(props) => props.theme.reddark};
-        }
+    button{
+        font-size: 36px;
+        font-weight: bold;
+        color: ${(props) => props.theme.redlight};
     }
 
     p{
         max-width: 90%;
-        text-align: center;
         margin-top: 8px;
+        display: flex;
+        justify-content: space-around;
+        gap: 8px;
+        align-items: center;
     }
 
     span{

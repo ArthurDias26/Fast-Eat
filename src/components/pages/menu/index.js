@@ -13,13 +13,13 @@ export default function Index() {
     useEffect(() =>{
         setMenuItens(MenuItens)
         if (menuType === 'Tudo'){
-            setMenuItens([...MenuItens.Pizza, ...MenuItens.Esfirra, ...MenuItens.Bebida, ...MenuItens.Sobremesa])
+            setMenuItens([...MenuItens.Pizza, ...MenuItens.Lanche, ...MenuItens.Bebida, ...MenuItens.Sobremesa])
         }
         else if (menuType === 'Pizza'){
             setMenuItens(MenuItens.Pizza)
         }
-        else if (menuType === 'Esfirra'){
-            setMenuItens(MenuItens.Esfirra)
+        else if (menuType === 'Lanche'){
+            setMenuItens(MenuItens.Lanche)
         }
         else if (menuType === 'Bebida'){
             setMenuItens(MenuItens.Bebida)
@@ -44,7 +44,7 @@ export default function Index() {
 
                 <button onClick={() => setMenuType('Pizza')}>Pizzas</button>
 
-                <button onClick={() => setMenuType('Esfirra')}>Esfirras</button>
+                <button onClick={() => setMenuType('Lanche')}>Lanches</button>
 
                 <button onClick={() => setMenuType('Bebida')}>Bebidas</button>
 
@@ -53,8 +53,8 @@ export default function Index() {
             </FoodTypes>
 
             <FoodCards>
-                {Array.isArray(menuItens) ? menuItens.map((item) => (
-                    <FoodCard>
+                {Array.isArray(menuItens) ? menuItens.map((item, index) => (
+                    <FoodCard key={index}>
                         
                         <img src={item.image} alt={"imagem" + item.title}/>
                         <h2>{item.title}</h2>

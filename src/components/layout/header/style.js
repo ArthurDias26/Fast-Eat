@@ -10,7 +10,7 @@ export const HeaderBox = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 0 10px #444;
+    box-shadow: 0 0 6px #444;
     font-size: 20px;
     position: fixed;
     top: 0;
